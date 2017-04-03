@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B40F90341E92E9140028BBF7 /* convo.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90311E92E9140028BBF7 /* convo.png */; };
+		B40F90351E92E9140028BBF7 /* convo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90321E92E9140028BBF7 /* convo@2x.png */; };
+		B40F90361E92E9140028BBF7 /* convo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90331E92E9140028BBF7 /* convo@3x.png */; };
+		B40F903A1E92EA3C0028BBF7 /* ObsDisc_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90381E92EA3C0028BBF7 /* ObsDisc_splash.png */; };
+		B40F903B1E92EA3C0028BBF7 /* ObsDisc_splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */; };
+		B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C4821E92C87A00FAE230 /* AppDelegate.swift */; };
+		B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C4841E92C87A00FAE230 /* FirstViewController.swift */; };
+		B440C4871E92C87A00FAE230 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C4861E92C87A00FAE230 /* SecondViewController.swift */; };
+		B440C48A1E92C87A00FAE230 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B440C4881E92C87A00FAE230 /* Main.storyboard */; };
+		B440C48C1E92C87A00FAE230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B440C48B1E92C87A00FAE230 /* Assets.xcassets */; };
+		B440C48F1E92C87A00FAE230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B440C48D1E92C87A00FAE230 /* LaunchScreen.storyboard */; };
+		B440C49F1E92DAE400FAE230 /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49C1E92DAE400FAE230 /* dragon.png */; };
+		B440C4A01E92DAE400FAE230 /* dragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49D1E92DAE400FAE230 /* dragon@2x.png */; };
+		B440C4A11E92DAE400FAE230 /* dragon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49E1E92DAE400FAE230 /* dragon@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B40F90311E92E9140028BBF7 /* convo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = convo.png; sourceTree = "<group>"; };
+		B40F90321E92E9140028BBF7 /* convo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@2x.png"; sourceTree = "<group>"; };
+		B40F90331E92E9140028BBF7 /* convo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@3x.png"; sourceTree = "<group>"; };
+		B40F90381E92EA3C0028BBF7 /* ObsDisc_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObsDisc_splash.png; sourceTree = "<group>"; };
+		B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ObsDisc_splash@2x.png"; sourceTree = "<group>"; };
+		B440C47F1E92C87A00FAE230 /* Obsidian_Disc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Obsidian_Disc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B440C4821E92C87A00FAE230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B440C4841E92C87A00FAE230 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B440C4861E92C87A00FAE230 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B440C4891E92C87A00FAE230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B440C48B1E92C87A00FAE230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B440C48E1E92C87A00FAE230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B440C4901E92C87A00FAE230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B440C49C1E92DAE400FAE230 /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon.png; sourceTree = "<group>"; };
+		B440C49D1E92DAE400FAE230 /* dragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@2x.png"; sourceTree = "<group>"; };
+		B440C49E1E92DAE400FAE230 /* dragon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B440C47C1E92C87A00FAE230 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B40F90371E92E9240028BBF7 /* convoIco */ = {
+			isa = PBXGroup;
+			children = (
+				B40F90311E92E9140028BBF7 /* convo.png */,
+				B40F90321E92E9140028BBF7 /* convo@2x.png */,
+				B40F90331E92E9140028BBF7 /* convo@3x.png */,
+			);
+			name = convoIco;
+			sourceTree = "<group>";
+		};
+		B440C4761E92C87A00FAE230 = {
+			isa = PBXGroup;
+			children = (
+				B440C4811E92C87A00FAE230 /* Obsidian_Disc */,
+				B440C4801E92C87A00FAE230 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B440C4801E92C87A00FAE230 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B440C47F1E92C87A00FAE230 /* Obsidian_Disc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B440C4811E92C87A00FAE230 /* Obsidian_Disc */ = {
+			isa = PBXGroup;
+			children = (
+				B40F90381E92EA3C0028BBF7 /* ObsDisc_splash.png */,
+				B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */,
+				B40F90371E92E9240028BBF7 /* convoIco */,
+				B440C4A21E92DAF200FAE230 /* dragonIco */,
+				B440C4821E92C87A00FAE230 /* AppDelegate.swift */,
+				B440C4841E92C87A00FAE230 /* FirstViewController.swift */,
+				B440C4861E92C87A00FAE230 /* SecondViewController.swift */,
+				B440C4881E92C87A00FAE230 /* Main.storyboard */,
+				B440C48B1E92C87A00FAE230 /* Assets.xcassets */,
+				B440C48D1E92C87A00FAE230 /* LaunchScreen.storyboard */,
+				B440C4901E92C87A00FAE230 /* Info.plist */,
+			);
+			path = Obsidian_Disc;
+			sourceTree = "<group>";
+		};
+		B440C4A21E92DAF200FAE230 /* dragonIco */ = {
+			isa = PBXGroup;
+			children = (
+				B440C49C1E92DAE400FAE230 /* dragon.png */,
+				B440C49D1E92DAE400FAE230 /* dragon@2x.png */,
+				B440C49E1E92DAE400FAE230 /* dragon@3x.png */,
+			);
+			name = dragonIco;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B440C47E1E92C87A00FAE230 /* Obsidian_Disc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B440C4931E92C87A00FAE230 /* Build configuration list for PBXNativeTarget "Obsidian_Disc" */;
+			buildPhases = (
+				B440C47B1E92C87A00FAE230 /* Sources */,
+				B440C47C1E92C87A00FAE230 /* Frameworks */,
+				B440C47D1E92C87A00FAE230 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Obsidian_Disc;
+			productName = Obsidian_Disc;
+			productReference = B440C47F1E92C87A00FAE230 /* Obsidian_Disc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B440C4771E92C87A00FAE230 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Utah State University";
+				TargetAttributes = {
+					B440C47E1E92C87A00FAE230 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B440C47A1E92C87A00FAE230 /* Build configuration list for PBXProject "Obsidian_Disc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B440C4761E92C87A00FAE230;
+			productRefGroup = B440C4801E92C87A00FAE230 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B440C47E1E92C87A00FAE230 /* Obsidian_Disc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B440C47D1E92C87A00FAE230 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B440C49F1E92DAE400FAE230 /* dragon.png in Resources */,
+				B440C48F1E92C87A00FAE230 /* LaunchScreen.storyboard in Resources */,
+				B40F903A1E92EA3C0028BBF7 /* ObsDisc_splash.png in Resources */,
+				B440C4A11E92DAE400FAE230 /* dragon@3x.png in Resources */,
+				B440C48C1E92C87A00FAE230 /* Assets.xcassets in Resources */,
+				B440C48A1E92C87A00FAE230 /* Main.storyboard in Resources */,
+				B40F90341E92E9140028BBF7 /* convo.png in Resources */,
+				B40F90351E92E9140028BBF7 /* convo@2x.png in Resources */,
+				B40F90361E92E9140028BBF7 /* convo@3x.png in Resources */,
+				B40F903B1E92EA3C0028BBF7 /* ObsDisc_splash@2x.png in Resources */,
+				B440C4A01E92DAE400FAE230 /* dragon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B440C47B1E92C87A00FAE230 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B440C4871E92C87A00FAE230 /* SecondViewController.swift in Sources */,
+				B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */,
+				B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B440C4881E92C87A00FAE230 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B440C4891E92C87A00FAE230 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B440C48D1E92C87A00FAE230 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B440C48E1E92C87A00FAE230 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B440C4911E92C87A00FAE230 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B440C4921E92C87A00FAE230 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B440C4941E92C87A00FAE230 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Obsidian_Disc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CS3200.Obsidian-Disc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B440C4951E92C87A00FAE230 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Obsidian_Disc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CS3200.Obsidian-Disc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B440C47A1E92C87A00FAE230 /* Build configuration list for PBXProject "Obsidian_Disc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B440C4911E92C87A00FAE230 /* Debug */,
+				B440C4921E92C87A00FAE230 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B440C4931E92C87A00FAE230 /* Build configuration list for PBXNativeTarget "Obsidian_Disc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B440C4941E92C87A00FAE230 /* Debug */,
+				B440C4951E92C87A00FAE230 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B440C4771E92C87A00FAE230 /* Project object */;
+}
