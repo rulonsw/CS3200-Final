@@ -10,6 +10,16 @@ import UIKit
 
 class AdventureLog: UITableViewCell {
 
+    //MARK: Properties
+    
+    @IBOutlet weak var logTitle: UILabel!
+    @IBOutlet weak var logDesc: UILabel!
+    @IBOutlet weak var posterPortrait: UIImageView!
+    @IBOutlet weak var logDate: UILabel!
+    @IBOutlet weak var logBody: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

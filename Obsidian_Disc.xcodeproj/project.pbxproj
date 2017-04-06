@@ -12,6 +12,7 @@
 		B40F90361E92E9140028BBF7 /* convo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90331E92E9140028BBF7 /* convo@3x.png */; };
 		B40F903A1E92EA3C0028BBF7 /* ObsDisc_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90381E92EA3C0028BBF7 /* ObsDisc_splash.png */; };
 		B40F903B1E92EA3C0028BBF7 /* ObsDisc_splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */; };
+		B41943181E96A54E00DFC8B2 /* fullLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41943171E96A54E00DFC8B2 /* fullLogViewController.swift */; };
 		B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C4821E92C87A00FAE230 /* AppDelegate.swift */; };
 		B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C4841E92C87A00FAE230 /* FirstViewController.swift */; };
 		B440C4871E92C87A00FAE230 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C4861E92C87A00FAE230 /* SecondViewController.swift */; };
@@ -31,6 +32,7 @@
 		B40F90331E92E9140028BBF7 /* convo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@3x.png"; sourceTree = "<group>"; };
 		B40F90381E92EA3C0028BBF7 /* ObsDisc_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObsDisc_splash.png; sourceTree = "<group>"; };
 		B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ObsDisc_splash@2x.png"; sourceTree = "<group>"; };
+		B41943171E96A54E00DFC8B2 /* fullLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = fullLogViewController.swift; path = ../fullLogViewController.swift; sourceTree = "<group>"; };
 		B440C47F1E92C87A00FAE230 /* Obsidian_Disc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Obsidian_Disc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B440C4821E92C87A00FAE230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B440C4841E92C87A00FAE230 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				B40F90371E92E9240028BBF7 /* convoIco */,
 				B440C4A21E92DAF200FAE230 /* dragonIco */,
 				B440C4821E92C87A00FAE230 /* AppDelegate.swift */,
+				B41943171E96A54E00DFC8B2 /* fullLogViewController.swift */,
 				B440C4841E92C87A00FAE230 /* FirstViewController.swift */,
 				B440C4861E92C87A00FAE230 /* SecondViewController.swift */,
 				B4452A091E931EC500F8C5D2 /* AdventureLog.swift */,
@@ -198,6 +201,7 @@
 				B4452A0A1E931EC500F8C5D2 /* AdventureLog.swift in Sources */,
 				B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */,
 				B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */,
+				B41943181E96A54E00DFC8B2 /* fullLogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
