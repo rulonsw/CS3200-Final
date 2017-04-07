@@ -77,10 +77,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventure Log Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQm-Tg-Nx5">
-                                                    <rect key="frame" x="88" y="8" width="211" height="21"/>
+                                                    <rect key="frame" x="88" y="8" width="175" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="211" id="7JI-D8-gic"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="WDd-du-uMm"/>
+                                                        <constraint firstAttribute="width" constant="175" id="jq3-RI-hKb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
