@@ -147,11 +147,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Adventure Log Stream" id="Gst-De-Noe">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3sG-vb-hd3">
-                            <connections>
-                                <segue destination="wmZ-Yr-HuT" kind="show" identifier="addALog" id="Dwk-KR-ThO"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3sG-vb-hd3"/>
                     </navigationItem>
                     <connections>
                         <outlet property="advTable" destination="bNu-uV-lfx" id="ibA-Ia-QvE"/>
@@ -185,7 +181,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Here" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGd-nJ-bWR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Here" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGd-nJ-bWR">
                                 <rect key="frame" x="62.5" y="103.5" width="250" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Hkr-28-diy"/>
@@ -233,6 +229,7 @@
                         <outlet property="fullLogDesc" destination="EGd-nJ-bWR" id="JsK-Is-EpH"/>
                         <outlet property="fullLogTitle" destination="cpW-jy-ZFe" id="SpU-0V-P1f"/>
                         <outlet property="logNavTitle" destination="xrI-Ja-e8C" id="bFG-YL-pxh"/>
+                        <outlet property="navBarTitle" destination="xrI-Ja-e8C" id="4zY-Xd-0RZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcg-gS-VYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,7 +335,6 @@
         <!--Navigation Controller-->
         <scene sceneID="8a5-bS-B5O">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zjO-ZE-pqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aqf-cM-Vlg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F3M-EC-gC4">
@@ -350,6 +346,7 @@
                         <segue destination="wmZ-Yr-HuT" kind="relationship" relationship="rootViewController" id="gzD-Hl-NXj"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjO-ZE-pqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3023" y="184"/>
         </scene>
@@ -359,7 +356,4 @@
         <image name="convo.png" width="25" height="25"/>
         <image name="dragon.png" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Dwk-KR-ThO"/>
-    </inferredMetricsTieBreakers>
 </document>

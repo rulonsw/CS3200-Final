@@ -85,20 +85,23 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             "advTitle" : "The Very Cool Thing That Happened",
             "advSub" : "Believe me, it was very cool.",
             "advBody" : "The party ventured into some woods. We met a kobold there. Turned out, we didn't immediately murder it. It turned out to be a sorcerer trapped in a kobold's body. Funny - sometimes, people are a little more than what they seem on the outside.",
-            "advDate" : "10/10/16"
+            "advDate" : "10/10/16",
+            "advAuthor": "B. Bluejeans"
             
         ],
         [
             "advTitle" : "In Memoriam Barry Bluejeans",
             "advSub" : "Poor boy.",
             "advBody" : "Today, we returned to Phandolin with the Phoenix Fire Gauntlet in tow. Turns out, Gundren Rockseeker hates orcs, so he ended up putting it on and absolutely losing his mind when he saw one loose an arrow in his direction. We tried talking him down, but he ended up blowing himself and the rest of the town up in a monstrous fireball. We took refuge in a well and woke up to find the entire city glassed. You win some, you lose some, I suppose.",
-            "advDate" : "10/17/17"
+            "advDate" : "10/17/17",
+            "advAuthor" : "B. Bluejeans"
         ],
         [
             "advTitle" : "Three Guys Ride a Train",
-            "advSub" : "All Aboard the Fantasy Choo-Choo!",
+            "advSub" : "All Aboard!",
             "advBody" : "On our way up to Neverwinter. Wonder what's going on up there?",
-            "advDate" : "10/24/16"
+            "advDate" : "10/24/16",
+            "advAuthor" : "B. Bluejeans"
         ]
         
     ]
