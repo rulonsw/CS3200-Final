@@ -17,15 +17,68 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var advTable: UITableView!
     
 
+    var selectedTitle = ""
+    var selectedDesc = ""
+    var selectedBody = ""
+    var selectedAuthor = UIImage()
+    var selectedDate = ""
 
     
-    //Segue from a full adventure log
+    //Segue stuff//
     @IBAction func unwindToTable(sender: UIStoryboardSegue) {
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        print("Did anything happen?")
+        if(segue.identifier == "TheScoop") {
+            print("Here we go, bois")
+            guard let navToFullLog = segue.destination as? UINavigationController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+        
+            guard let adventureCell = sender as? AdventureLog else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+        
+            guard let indexPath = advTable.indexPathForSelectedRow else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedLog = adventureArray[indexPath.row]
+            let fullLog = navToFullLog.viewControllers.first as! fullLogViewController
+            fullLog.adv = selectedLog
+        }
+        
+    }
+    ///////////////
 
-
+    //This is how I remind this controller/of what it really is
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return adventureArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cellId = "logCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath as IndexPath) as? AdventureLog else {
+            print("Something went horribly wrong here.")
+            exit(1)
+        }
+        print("Table cell \(indexPath.row) selected for sending")
+        var selectedAdventure = adventureArray[indexPath.row]
+        selectedTitle = selectedAdventure["advTitle"]!
+        print(selectedTitle)
+        selectedDesc = selectedAdventure["advSub"]!
+        selectedBody = selectedAdventure["advBody"]!
+        selectedDate = selectedAdventure["advDate"]!
+        
+    }
     
     let adventureArray = [
         [
@@ -51,23 +104,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     ]
 
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return adventureArray.count
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cellId = "logCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath as IndexPath) as? AdventureLog else {
-            print("Something went horribly wrong here.")
-            exit(1)
-        }
-        
-        
-    }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellId = "logCell"

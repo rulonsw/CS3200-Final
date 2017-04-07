@@ -23,6 +23,7 @@
 		B440C4A01E92DAE400FAE230 /* dragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49D1E92DAE400FAE230 /* dragon@2x.png */; };
 		B440C4A11E92DAE400FAE230 /* dragon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49E1E92DAE400FAE230 /* dragon@3x.png */; };
 		B4452A0A1E931EC500F8C5D2 /* AdventureLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4452A091E931EC500F8C5D2 /* AdventureLog.swift */; };
+		B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */; };
 		B47D49301E93224900F90A3F /* BarryBluejeans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		B440C49D1E92DAE400FAE230 /* dragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@2x.png"; sourceTree = "<group>"; };
 		B440C49E1E92DAE400FAE230 /* dragon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@3x.png"; sourceTree = "<group>"; };
 		B4452A091E931EC500F8C5D2 /* AdventureLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdventureLog.swift; path = ../AdventureLog.swift; sourceTree = "<group>"; };
+		B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarryBluejeans.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				B440C4861E92C87A00FAE230 /* SecondViewController.swift */,
 				B4452A091E931EC500F8C5D2 /* AdventureLog.swift */,
 				B440C4881E92C87A00FAE230 /* Main.storyboard */,
+				B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */,
 				B440C48B1E92C87A00FAE230 /* Assets.xcassets */,
 				B440C48D1E92C87A00FAE230 /* LaunchScreen.storyboard */,
 				B440C4901E92C87A00FAE230 /* Info.plist */,
@@ -201,6 +204,7 @@
 				B4452A0A1E931EC500F8C5D2 /* AdventureLog.swift in Sources */,
 				B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */,
 				B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */,
+				B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */,
 				B41943181E96A54E00DFC8B2 /* fullLogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

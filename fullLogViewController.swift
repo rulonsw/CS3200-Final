@@ -14,23 +14,22 @@ class fullLogViewController: UIViewController {
     @IBOutlet weak var fullLogDesc: UILabel!
     @IBOutlet weak var fullLogBody: UITextView!
     @IBOutlet weak var logNavTitle: UINavigationItem!
-    let adv =         [
+    
+    var adv = [
         "advTitle" : "",
         "advSub" : "",
         "advBody" : "",
         "advDate" : ""
-        
     ]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-         if true {
-            logNavTitle.title = adv["advDate"]
-            fullLogTitle.text = adv["advTitle"]
-            fullLogDesc.text = adv["advSub"]
-            fullLogBody.text = adv["advBody"]
-        }
+        fullLogTitle.text = adv["advTitle"]
+        fullLogDesc.text = adv["advSub"]
+        fullLogBody.text = adv["advBody"]
+        
         // Do any additional setup after loading the view.
     }
 
