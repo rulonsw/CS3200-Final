@@ -67,15 +67,21 @@
                                                         <constraint firstAttribute="height" constant="80" id="S73-f5-H7s"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adventure Log Desc." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-Wp-N2R">
-                                                    <rect key="frame" x="88" y="28" width="279" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventure Log Desc." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-Wp-N2R">
+                                                    <rect key="frame" x="89" y="28" width="211" height="14.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="211" id="hqS-Qg-PBs"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventure Log Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQm-Tg-Nx5">
-                                                    <rect key="frame" x="88" y="8" width="149" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventure Log Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQm-Tg-Nx5">
+                                                    <rect key="frame" x="88" y="8" width="211" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="211" id="7JI-D8-gic"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="WDd-du-uMm"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -86,7 +92,7 @@
                                                     <color key="textColor" red="0.52072538860103634" green="0.52072538860103634" blue="0.52072538860103634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAT-Ge-76V">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAT-Ge-76V">
                                                     <rect key="frame" x="88" y="45" width="279" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -99,6 +105,8 @@
                                                 <constraint firstItem="eQm-Tg-Nx5" firstAttribute="top" secondItem="dnd-dJ-U4D" secondAttribute="topMargin" id="Ppx-YC-SN8"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="uXw-dk-Efl" secondAttribute="trailing" id="WkN-JI-a2S"/>
                                                 <constraint firstItem="QsI-f3-koI" firstAttribute="centerY" secondItem="dnd-dJ-U4D" secondAttribute="centerY" id="cQd-u8-gcF"/>
+                                                <constraint firstItem="cMN-Wp-N2R" firstAttribute="leading" secondItem="QsI-f3-koI" secondAttribute="trailing" constant="8" id="mMn-q5-Rbr"/>
+                                                <constraint firstItem="cMN-Wp-N2R" firstAttribute="top" secondItem="dnd-dJ-U4D" secondAttribute="topMargin" constant="20" id="osG-Fi-4hL"/>
                                                 <constraint firstItem="QsI-f3-koI" firstAttribute="leading" secondItem="dnd-dJ-U4D" secondAttribute="leading" constant="1" id="szb-Rh-Gi6"/>
                                                 <constraint firstItem="uXw-dk-Efl" firstAttribute="top" secondItem="dnd-dJ-U4D" secondAttribute="topMargin" id="zME-qe-vjN"/>
                                             </constraints>
