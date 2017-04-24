@@ -22,6 +22,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedBody = ""
     var selectedAuthor = UIImage()
     var selectedDate = ""
+    
+    var isAuth = false
+    
+    let swiftKeychain = KeychainSwift()
 
     
     //Segue stuff//
@@ -131,10 +135,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.advTable.dataSource = self
         self.advTable.delegate = self
         
+        guard isAuth else {
+            self.performSegue(withIdentifier: "requireLogin", sender: Any?.self)
+            return
+        }
+
         
         
         
