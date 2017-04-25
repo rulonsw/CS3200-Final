@@ -13,7 +13,7 @@ import OAuthSwift
 
 class LogInScreen: UIViewController {
     
-    var savedUserCreds = UserCreds()
+    var savedUserCreds = UserCreds(token:"", secret:"")
     
     @IBAction func RequestUserDeets(_ sender: UIButton) {
         
@@ -31,8 +31,9 @@ class LogInScreen: UIViewController {
                     print(credential.oauthToken)
                     print(credential.oauthTokenSecret)
                     //Save token and secret for later:
-                    self.savedUserCreds.userToken = credential.oauthToken
-                    self.savedUserCreds.userSecret = credential.oauthTokenSecret
+                    self.savedUserCreds = UserCreds(token: credential.oauthToken, secret: credential.oauthTokenSecret)
+                    print(self.savedUserCreds.userToken)
+                    print(self.savedUserCreds.userSecret)
                 
                 //Success Alert
                 let alert = UIAlertController(title: "Success", message: "Connection to Obsidian Portal successful!", preferredStyle: UIAlertControllerStyle.alert)
@@ -75,18 +76,26 @@ class LogInScreen: UIViewController {
             }
             
             
-            guard self.savedUserCreds.userToken != "" && self.savedUserCreds.userSecret != "" else {
+            guard savedUserCreds.userToken != "" && savedUserCreds.userSecret != "" else {
                 fatalError("User was never fully authenticated.")
             }
             
             navToAdvTable.isAuth = true
             
-            //Who needs a hash when u r 1337?
-            navToAdvTable.swiftKeychain.set
-            navToAdvTable.swiftKeychain.set((self.savedUserCreds as Data?)!, forKey: "0b51d14n_p0r741")
+            saveCredentials()
         }
         
     }
 
+    //Save/load data functions
+    private func saveCredentials() {
+        let success = NSKeyedArchiver.archiveRootObject(savedUserCreds, toFile: UserCreds.ArchiveURL.path)
+        if success {
+            print("User creds saved, yo")
+            print("saved user creds: Token - ", savedUserCreds.userToken, " Secret - ", savedUserCreds.userSecret)
+        } else {
+            print("Something terrible has happened to your user data")
+        }
+    }
 }
 

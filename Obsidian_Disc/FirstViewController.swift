@@ -23,13 +23,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedAuthor = UIImage()
     var selectedDate = ""
     
-    var isAuth = false
+    var isAuth = true
     
-    var retrievedUserCreds = UserCreds()
-    
-    
-    let swiftKeychain = KeychainSwift()
 
+    
+    
     
     //Segue stuff//
     @IBAction func unwindToTable(sender: UIStoryboardSegue) {
@@ -140,28 +138,31 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.advTable.dataSource = self
         self.advTable.delegate = self
         
-        if ((swiftKeychain.getData("0b51d14n_p0r741") as Data?) != nil) {
+        if let retrievedUserCreds = loadUserCredsIfAny() {
+            print("This is what loadUserCreds is returning: ", retrievedUserCreds)
+            print("The token of the loaded user is ", retrievedUserCreds.userToken)
             isAuth = true
-        } else {
+        }
+        else {
             isAuth = false
         }
-                
-        guard isAuth else {
+        
+        if isAuth {//nothing to do here
+        print("User information is stored.")}
+        else {
             self.performSegue(withIdentifier: "requireLogin", sender: Any?.self)
-            return
         }
 
         
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    private func loadUserCredsIfAny() -> UserCreds? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: UserCreds.ArchiveURL.path) as? UserCreds
+    }
 
 }
 

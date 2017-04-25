@@ -8,35 +8,29 @@
 
 import Foundation
 
-struct propertyKey {
-    static var userToken: String = ""
-    static var userSecret: String = ""
-}
-
-class UserCreds: NSData {
-    var userToken: String = ""
-    var userSecret: String = ""
+class UserCreds: NSObject, NSCoding {
+     var userToken: String = ""
+     var userSecret: String = ""
     
-    init?(token: String, secret: String) {
-        super.init()
+    init(token: String, secret: String) {
         self.userToken = token
         self.userSecret = secret
-        
-        if (token == "" || secret == "") {return nil}
     }
     
-    override func encode(with aCoder: NSCoder) {
-        aCoder.encode(userToken, forKey: propertyKey.userToken)
-        aCoder.encode(userSecret, forKey: propertyKey.userSecret)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(userToken, forKey: "tok")
+        aCoder.encode(userSecret, forKey: "sec")
     }
     
-    required convenience init?(coder aDecoder: NSCoder) {
-        guard let token = aDecoder.decodeObject(forKey: propertyKey.userToken) as? String,
-            let secret = aDecoder.decodeObject(forKey: propertyKey.userSecret) as? String else {
-                return
-        }
+    required convenience init(coder aDecoder: NSCoder) {
+        let savtoken = aDecoder.decodeObject(forKey: "tok") as! String
+        let savsecret = aDecoder.decodeObject(forKey: "sec") as! String
         
-        self.init(token: token, secret: secret)
+        self.init(token: savtoken, secret: savsecret)
     }
+    
+    //This is where we archive data
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("tok_data")
     
 }

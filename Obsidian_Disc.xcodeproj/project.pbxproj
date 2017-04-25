@@ -29,7 +29,6 @@
 		B44714C91EAF0D3500700329 /* userCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44714C81EAF0D3500700329 /* userCreds.swift */; };
 		B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */; };
 		B47D49301E93224900F90A3F /* BarryBluejeans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */; };
-		B4B42E1A1EAE4B5F0041F2E6 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B42E191EAE4B5F0041F2E6 /* KeychainSwift.swift */; };
 		B4B4415C1EAECDF800EC7B4B /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */; };
 /* End PBXBuildFile section */
 
@@ -254,7 +253,6 @@
 		B44714C81EAF0D3500700329 /* userCreds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userCreds.swift; sourceTree = "<group>"; };
 		B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarryBluejeans.jpg; sourceTree = "<group>"; };
-		B4B42E191EAE4B5F0041F2E6 /* KeychainSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
 		B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,7 +363,6 @@
 				B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */,
 				B40F90371E92E9240028BBF7 /* convoIco */,
 				B440C4A21E92DAF200FAE230 /* dragonIco */,
-				B4B42E191EAE4B5F0041F2E6 /* KeychainSwift.swift */,
 				B440C4821E92C87A00FAE230 /* AppDelegate.swift */,
 				B42611011EAEEBEC00EDC435 /* fullLogViewController.swift */,
 				B440C4841E92C87A00FAE230 /* FirstViewController.swift */,
@@ -732,7 +729,6 @@
 				B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */,
 				B4B4415C1EAECDF800EC7B4B /* QueryBuilder.swift in Sources */,
 				B43B6FD71EA9A02E00F1A70E /* logInHandler.swift in Sources */,
-				B4B42E1A1EAE4B5F0041F2E6 /* KeychainSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

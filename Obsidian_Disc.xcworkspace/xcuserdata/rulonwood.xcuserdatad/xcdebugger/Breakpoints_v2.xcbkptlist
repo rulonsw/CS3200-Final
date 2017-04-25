@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Obsidian_Disc/userCreds.swift"
-            timestampString = "514788934.458039"
+            timestampString = "514836959.055012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "init(coder:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "UserCreds"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Obsidian_Disc/logInHandler.swift"
+            timestampString = "514832191.228742"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "saveCredentials()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
