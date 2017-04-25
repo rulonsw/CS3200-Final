@@ -1,4 +1,4 @@
-////
+//
 ////  QueryBuilder.swift
 ////  Obsidian_Disc
 ////
@@ -9,6 +9,7 @@
 ////  Spotify query building.
 //
 //import Foundation
+//import Alamofire
 //
 //class QueryBuilder {
 //    

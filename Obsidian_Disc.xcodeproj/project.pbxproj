@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		687857E570EE70E99B117187 /* Pods_Obsidian_Disc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2052A958268FC2A203A4C26B /* Pods_Obsidian_Disc.framework */; };
 		B40F90341E92E9140028BBF7 /* convo.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90311E92E9140028BBF7 /* convo.png */; };
 		B40F90351E92E9140028BBF7 /* convo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90321E92E9140028BBF7 /* convo@2x.png */; };
 		B40F90361E92E9140028BBF7 /* convo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90331E92E9140028BBF7 /* convo@3x.png */; };
@@ -25,6 +26,7 @@
 		B440C49F1E92DAE400FAE230 /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49C1E92DAE400FAE230 /* dragon.png */; };
 		B440C4A01E92DAE400FAE230 /* dragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49D1E92DAE400FAE230 /* dragon@2x.png */; };
 		B440C4A11E92DAE400FAE230 /* dragon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49E1E92DAE400FAE230 /* dragon@3x.png */; };
+		B44714C91EAF0D3500700329 /* userCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44714C81EAF0D3500700329 /* userCreds.swift */; };
 		B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */; };
 		B47D49301E93224900F90A3F /* BarryBluejeans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */; };
 		B4B42E1A1EAE4B5F0041F2E6 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B42E191EAE4B5F0041F2E6 /* KeychainSwift.swift */; };
@@ -214,9 +216,19 @@
 			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
 			remoteInfo = OAuthSwiftTests;
 		};
+		B44714AC1EAF04FD00700329 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F43502791A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2052A958268FC2A203A4C26B /* Pods_Obsidian_Disc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Obsidian_Disc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61A7BE11529DA151EDEDFA4F /* Pods-Obsidian_Disc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obsidian_Disc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc.release.xcconfig"; sourceTree = "<group>"; };
+		9E4CB46A0F220F614F96496F /* Pods-Obsidian_Disc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obsidian_Disc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc.debug.xcconfig"; sourceTree = "<group>"; };
 		B40F90311E92E9140028BBF7 /* convo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = convo.png; sourceTree = "<group>"; };
 		B40F90321E92E9140028BBF7 /* convo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@2x.png"; sourceTree = "<group>"; };
 		B40F90331E92E9140028BBF7 /* convo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@3x.png"; sourceTree = "<group>"; };
@@ -239,6 +251,7 @@
 		B440C49C1E92DAE400FAE230 /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragon.png; sourceTree = "<group>"; };
 		B440C49D1E92DAE400FAE230 /* dragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@2x.png"; sourceTree = "<group>"; };
 		B440C49E1E92DAE400FAE230 /* dragon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@3x.png"; sourceTree = "<group>"; };
+		B44714C81EAF0D3500700329 /* userCreds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userCreds.swift; sourceTree = "<group>"; };
 		B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarryBluejeans.jpg; sourceTree = "<group>"; };
 		B4B42E191EAE4B5F0041F2E6 /* KeychainSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
@@ -250,12 +263,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				687857E570EE70E99B117187 /* Pods_Obsidian_Disc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EDDDB8E8DDF4EF07222CC46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E4CB46A0F220F614F96496F /* Pods-Obsidian_Disc.debug.xcconfig */,
+				61A7BE11529DA151EDEDFA4F /* Pods-Obsidian_Disc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8926226BDA28DC31B72EAC50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2052A958268FC2A203A4C26B /* Pods_Obsidian_Disc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B40F90371E92E9240028BBF7 /* convoIco */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +344,8 @@
 				B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */,
 				B440C4811E92C87A00FAE230 /* Obsidian_Disc */,
 				B440C4801E92C87A00FAE230 /* Products */,
+				2EDDDB8E8DDF4EF07222CC46 /* Pods */,
+				8926226BDA28DC31B72EAC50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,6 +373,7 @@
 				B42611091EAEEBF600EDC435 /* AdventureLog.swift */,
 				B440C4881E92C87A00FAE230 /* Main.storyboard */,
 				B43B6FD61EA9A02E00F1A70E /* logInHandler.swift */,
+				B44714C81EAF0D3500700329 /* userCreds.swift */,
 				B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */,
 				B440C48B1E92C87A00FAE230 /* Assets.xcassets */,
 				B440C48D1E92C87A00FAE230 /* LaunchScreen.storyboard */,
@@ -367,13 +401,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B440C4931E92C87A00FAE230 /* Build configuration list for PBXNativeTarget "Obsidian_Disc" */;
 			buildPhases = (
+				7937126CEA3CF0BC87779E29 /* [CP] Check Pods Manifest.lock */,
 				B440C47B1E92C87A00FAE230 /* Sources */,
 				B440C47C1E92C87A00FAE230 /* Frameworks */,
 				B440C47D1E92C87A00FAE230 /* Resources */,
+				A94D82B803E1570D72A4D893 /* [CP] Embed Pods Frameworks */,
+				097BE551F5FBFA591BC74568 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B44714AD1EAF04FD00700329 /* PBXTargetDependency */,
 			);
 			name = Obsidian_Disc;
 			productName = Obsidian_Disc;
@@ -631,11 +669,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		097BE551F5FBFA591BC74568 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7937126CEA3CF0BC87779E29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A94D82B803E1570D72A4D893 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B440C47B1E92C87A00FAE230 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44714C91EAF0D3500700329 /* userCreds.swift in Sources */,
 				B440C4871E92C87A00FAE230 /* SecondViewController.swift in Sources */,
 				B42611E61EAEED6800EDC435 /* OPResponseTypes.swift in Sources */,
 				B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */,
@@ -650,6 +737,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B44714AD1EAF04FD00700329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			targetProxy = B44714AC1EAF04FD00700329 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B440C4881E92C87A00FAE230 /* Main.storyboard */ = {
@@ -768,6 +863,7 @@
 		};
 		B440C4941E92C87A00FAE230 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E4CB46A0F220F614F96496F /* Pods-Obsidian_Disc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Obsidian_Disc/Info.plist;
@@ -780,6 +876,7 @@
 		};
 		B440C4951E92C87A00FAE230 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A7BE11529DA151EDEDFA4F /* Pods-Obsidian_Disc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Obsidian_Disc/Info.plist;

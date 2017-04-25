@@ -140,6 +140,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.advTable.dataSource = self
         self.advTable.delegate = self
         
+        if ((swiftKeychain.getData("0b51d14n_p0r741") as Data?) != nil) {
+            isAuth = true
+        } else {
+            isAuth = false
+        }
+                
         guard isAuth else {
             self.performSegue(withIdentifier: "requireLogin", sender: Any?.self)
             return
