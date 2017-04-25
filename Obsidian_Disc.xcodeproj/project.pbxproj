@@ -14,6 +14,7 @@
 		B40F903B1E92EA3C0028BBF7 /* ObsDisc_splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */; };
 		B42611021EAEEBEC00EDC435 /* fullLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42611011EAEEBEC00EDC435 /* fullLogViewController.swift */; };
 		B426110A1EAEEBF600EDC435 /* AdventureLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42611091EAEEBF600EDC435 /* AdventureLog.swift */; };
+		B42611E61EAEED6800EDC435 /* OPResponseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42611E51EAEED6800EDC435 /* OPResponseTypes.swift */; };
 		B43B6FD71EA9A02E00F1A70E /* logInHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B6FD61EA9A02E00F1A70E /* logInHandler.swift */; };
 		B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C4821E92C87A00FAE230 /* AppDelegate.swift */; };
 		B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C4841E92C87A00FAE230 /* FirstViewController.swift */; };
@@ -225,6 +226,7 @@
 		B42611091EAEEBF600EDC435 /* AdventureLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLog.swift; sourceTree = "<group>"; };
 		B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FancyBoyDaniel.xcodeproj; path = Sword/FancyBoyDaniel.xcodeproj; sourceTree = "<group>"; };
 		B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
+		B42611E51EAEED6800EDC435 /* OPResponseTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPResponseTypes.swift; sourceTree = "<group>"; };
 		B43B6FD61EA9A02E00F1A70E /* logInHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logInHandler.swift; sourceTree = "<group>"; };
 		B440C47F1E92C87A00FAE230 /* Obsidian_Disc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Obsidian_Disc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B440C4821E92C87A00FAE230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				B440C48D1E92C87A00FAE230 /* LaunchScreen.storyboard */,
 				B440C4901E92C87A00FAE230 /* Info.plist */,
 				B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */,
+				B42611E51EAEED6800EDC435 /* OPResponseTypes.swift */,
 			);
 			path = Obsidian_Disc;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B440C4871E92C87A00FAE230 /* SecondViewController.swift in Sources */,
+				B42611E61EAEED6800EDC435 /* OPResponseTypes.swift in Sources */,
 				B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */,
 				B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */,
 				B42611021EAEEBEC00EDC435 /* fullLogViewController.swift in Sources */,
