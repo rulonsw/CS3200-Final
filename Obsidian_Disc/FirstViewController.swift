@@ -25,6 +25,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var isAuth = false
     
+    var retrievedUserCreds = UserCreds()
+    
+    
     let swiftKeychain = KeychainSwift()
 
     
@@ -35,9 +38,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        print("Did anything happen?")
+        //If user decides to take a look at an adventure log
         if(segue.identifier == "TheScoop") {
-            print("Here we go, bois")
             guard let navToFullLog = segue.destination as? UINavigationController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }

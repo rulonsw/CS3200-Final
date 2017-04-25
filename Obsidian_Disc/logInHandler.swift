@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import OAuthSwift
 
-class UserCreds: NSObject {
+class UserCreds: NSData {
     var userToken: String = ""
     var userSecret: String = ""
     
@@ -31,11 +31,16 @@ class LogInScreen: UIViewController {
         )
         let _ = oauthswift.authorize(
             withCallbackURL: URL(string: "obs-disc://oauth-cb/obsidian")!,
-            success: { credential, response, parameters in
-                print(credential.oauthToken)
-                print(credential.oauthTokenSecret)
-                // create success message
-                let alert = UIAlertController(title: "Successful Authentication", message: "You've been logged in!", preferredStyle: UIAlertControllerStyle.alert)
+            success: {
+                credential, response, parameters in
+                    print(credential.oauthToken)
+                    print(credential.oauthTokenSecret)
+                    //Save token and secret for later:
+                    self.savedUserCreds.userToken = credential.oauthToken
+                    self.savedUserCreds.userSecret = credential.oauthTokenSecret
+                
+                //Success Alert
+                let alert = UIAlertController(title: "Success", message: "Connection to Obsidian Portal successful!", preferredStyle: UIAlertControllerStyle.alert)
                 
                 // add an action (button)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -43,6 +48,16 @@ class LogInScreen: UIViewController {
                 // show the alert
                 self.present(alert, animated: true, completion: nil)
                 
+                
+                oauthswift.client.get(" http://api.obsidianportal.com/v1/users/me.json",
+                                      success: { response in
+                                        let dataString = response.string
+                                        print(dataString)
+                },
+                                      failure: { error in
+                                        print(error)
+                }
+                )
         },
             failure: { error in
                 print(error.localizedDescription)
@@ -63,11 +78,31 @@ class LogInScreen: UIViewController {
         }
 
     }
-    @IBOutlet weak var ODUsername: UITextField!
-    @IBOutlet weak var ODPassword: UITextField!
+
     
-    @IBAction func endPWEntry(_ sender: Any) {
-    }
-    @IBAction func endUNEntry(_ sender: Any) {
-    }
+    //Action for the button thing: { action in self.performSegue(withIdentifier: "continueToAdvTable", sender: self) }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//        //If user decides to take a look at an adventure log
+//        if(segue.identifier == "continueToAdvTable") {
+//            guard let navToAdvTable = segue.destination as? FirstViewController else {
+//                fatalError("Unexpected destination: \(segue.destination)")
+//            }
+//            
+//            
+//            guard self.savedUserCreds.userToken != "" && self.savedUserCreds.userSecret != "" else {
+//                fatalError("User was never fully authenticated.")
+//            }
+//            
+//            navToAdvTable.isAuth = true
+//            navToAdvTable.userToken = self.savedUserCreds.userToken
+//            navToAdvTable.userSecret = self.savedUserCreds.userSecret
+//            
+//            //Who needs a hash when u r 1337?
+//            navToAdvTable.swiftKeychain.set(self.savedUserCreds as Data, forKey: "0b51d14n_p0r741")
+//        }
+//        
+//    }
+
 }
+
