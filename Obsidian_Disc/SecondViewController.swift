@@ -8,51 +8,30 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let choices = ["Set a Campaign Date", "Send an Announcement", "Send a Player Secret"]
-        
-    @IBOutlet weak var choicesAvailable: UITableView!
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return choices.count
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let cellId = "projectSelfCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath as IndexPath) as? UITableViewCell else {
-            print("Something went horribly wrong here.")
-            exit(1)
-        }
+class SecondViewController: UIViewController {
 
-        
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellId = "projectSelfCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? ChoiceTableViewCell else {
-            print("Something went horribly wrong here.")
-            exit(1)
-        }
-        
-        let choice = choices[indexPath.row]
-        cell.choiceLabel.text = choice
-        
-        
-        return cell
-    }
+    @IBOutlet weak var playerSecretButt: UIButton!
+    @IBOutlet weak var announceButt: UIButton!
+    @IBOutlet weak var campaignDateButt: UIButton!
+    @IBOutlet weak var FancyBoyDaniel: UIImageView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        playerSecretButt.layer.borderColor = UIColor(red: 81/255, green: 159/255, blue: 243/255, alpha: 1).cgColor
+        announceButt.layer.borderColor = UIColor(red: 81/255, green: 159/255, blue: 243/255, alpha: 1).cgColor
+        campaignDateButt.layer.borderColor = UIColor(red: 81/255, green: 159/255, blue: 243/255, alpha: 1).cgColor
         
-        self.choicesAvailable.dataSource = self
-        self.choicesAvailable.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
+        playerSecretButt.layer.borderWidth = 2.5
+        announceButt.layer.borderWidth = 2.5
+        campaignDateButt.layer.borderWidth = 2.5
+        
+        playerSecretButt.layer.cornerRadius = 10
+        announceButt.layer.cornerRadius = 10
+        campaignDateButt.layer.cornerRadius = 10
+
     }
 
     override func didReceiveMemoryWarning() {

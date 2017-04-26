@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var adventureSearch: UISearchBar!
@@ -24,7 +25,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedDate = ""
     
     var isAuth = true
-    
 
     
     
@@ -152,7 +152,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         else {
             self.performSegue(withIdentifier: "requireLogin", sender: Any?.self)
         }
-
+        let retrievedUserCreds = loadUserCredsIfAny()
+        
+//        qb.searchForSparseList(userObj: retrievedUserCreds!)
         
     }
 
@@ -163,6 +165,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     private func loadUserCredsIfAny() -> UserCreds? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: UserCreds.ArchiveURL.path) as? UserCreds
     }
-
+    
 }
 
