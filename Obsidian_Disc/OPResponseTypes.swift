@@ -1,42 +1,54 @@
+////
+////  OPResponseTypes.swift
+////  Obsidian_Disc
+////
+////  Created by Rulon Wood on 4/24/17.
+////  Copyright © 2017 Utah State University. All rights reserved.
+////
 //
-//  OPResponseTypes.swift
-//  Obsidian_Disc
+//import Foundation
 //
-//  Created by Rulon Wood on 4/24/17.
-//  Copyright © 2017 Utah State University. All rights reserved.
+//class sparse_wiki {
+//    var wiki_id: String = ""
+//    var title: String = ""
+//    var time: String = ""
+//    var tagline: String = ""
+//    init() {
+//        wiki_id = ""
+//        title = ""
+//        time = ""
+//        tagline = ""
+//    }
+//    init(JSON: [String:AnyObject]) {
+//        guard let jId = JSON["id"] as? String,
+//        let jTitle = JSON["name"] as? String,
+//        let jTime = JSON["created_at"] as? String
+//            else { return }
+//        guard let jTagline = JSON["post_tagline"] as? String
+//            else { let jTagline = "No Tagline for This Adventure Log."
+//                return}
+//        
+//        wiki_id = jId
+//        title = jTitle
+//        time = jTime
+//        tagline = jTagline
+//        
+//    }
+//    
+//}
 //
-
-import Foundation
-
-class sparse_wiki {
-    static var wiki_id: String = ""
-    static var title: String = ""
-    static var time: String = ""
-    static var tagline: String = ""
-    
-    init(JSON: [String:AnyObject]) {
-        guard let id = JSON["id"] as? String,
-        let title = JSON["name"] as? String,
-        let time = JSON["post_time"] as? String
-            else { return }
-        guard let tagline = JSON["post_tagline"] as? String
-            else { let tagline = "No Tagline for This Adventure Log." }
-        
-        self.wiki_id = id
-        self.title = title
-        self.time = time
-        self.tagline = tagline
-        
-    }
-    
-}
-
-class full_wiki {
-    static var basics: sparse_wiki
-    static var body: String = ""
-    
-    init(JSON: [String:AnyObject]) {
-        self.basics = sparse
-        self.body =
-    }
-}
+//class full_wiki {
+//    var basics = sparse_wiki()
+//    var body: String = ""
+//    
+//    init(JSON: [String:AnyObject]) {
+//        self.basics = sparse_wiki(JSON:JSON)
+//        guard let body = JSON["body"] as? String
+//            else {
+//                return
+//        }
+//        
+//        self.body = body
+//        
+//    }
+//}

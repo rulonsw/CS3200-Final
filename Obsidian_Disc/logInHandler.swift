@@ -10,15 +10,10 @@ import Foundation
 import UIKit
 import OAuthSwift
 
-class UserCreds: NSData {
-    var userToken: String = ""
-    var userSecret: String = ""
-    
-}
 
 class LogInScreen: UIViewController {
     
-    var savedUserCreds = UserCreds()
+    var savedUserCreds = UserCreds(token:"", secret:"")
     
     @IBAction func RequestUserDeets(_ sender: UIButton) {
         
@@ -36,28 +31,19 @@ class LogInScreen: UIViewController {
                     print(credential.oauthToken)
                     print(credential.oauthTokenSecret)
                     //Save token and secret for later:
-                    self.savedUserCreds.userToken = credential.oauthToken
-                    self.savedUserCreds.userSecret = credential.oauthTokenSecret
+                    self.savedUserCreds = UserCreds(token: credential.oauthToken, secret: credential.oauthTokenSecret)
+                    print(self.savedUserCreds.userToken)
+                    print(self.savedUserCreds.userSecret)
                 
                 //Success Alert
                 let alert = UIAlertController(title: "Success", message: "Connection to Obsidian Portal successful!", preferredStyle: UIAlertControllerStyle.alert)
                 
                 // add an action (button)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in self.performSegue(withIdentifier: "continueToAdvTable", sender: self) }))
                 
                 // show the alert
                 self.present(alert, animated: true, completion: nil)
                 
-                
-                oauthswift.client.get(" http://api.obsidianportal.com/v1/users/me.json",
-                                      success: { response in
-                                        let dataString = response.string
-                                        print(dataString)
-                },
-                                      failure: { error in
-                                        print(error)
-                }
-                )
         },
             failure: { error in
                 print(error.localizedDescription)
@@ -80,29 +66,36 @@ class LogInScreen: UIViewController {
     }
 
     
-    //Action for the button thing: { action in self.performSegue(withIdentifier: "continueToAdvTable", sender: self) }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//        //If user decides to take a look at an adventure log
-//        if(segue.identifier == "continueToAdvTable") {
-//            guard let navToAdvTable = segue.destination as? FirstViewController else {
-//                fatalError("Unexpected destination: \(segue.destination)")
-//            }
-//            
-//            
-//            guard self.savedUserCreds.userToken != "" && self.savedUserCreds.userSecret != "" else {
-//                fatalError("User was never fully authenticated.")
-//            }
-//            
-//            navToAdvTable.isAuth = true
-//            navToAdvTable.userToken = self.savedUserCreds.userToken
-//            navToAdvTable.userSecret = self.savedUserCreds.userSecret
-//            
-//            //Who needs a hash when u r 1337?
-//            navToAdvTable.swiftKeychain.set(self.savedUserCreds as Data, forKey: "0b51d14n_p0r741")
-//        }
-//        
-//    }
+    //Action for the button thing:
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        //If user decides to take a look at an adventure log
+        if(segue.identifier == "continueToAdvTable") {
+            guard let navToAdvTable = segue.destination as? FirstViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            
+            guard savedUserCreds.userToken != "" && savedUserCreds.userSecret != "" else {
+                fatalError("User was never fully authenticated.")
+            }
+            
+            navToAdvTable.isAuth = true
+            
+            saveCredentials()
+        }
+        
+    }
 
+    //Save/load data functions
+    private func saveCredentials() {
+        let success = NSKeyedArchiver.archiveRootObject(savedUserCreds, toFile: UserCreds.ArchiveURL.path)
+        if success {
+            print("User creds saved, yo")
+            print("saved user creds: Token - ", savedUserCreds.userToken, " Secret - ", savedUserCreds.userSecret)
+        } else {
+            print("Something terrible has happened to your user data")
+        }
+    }
 }
 

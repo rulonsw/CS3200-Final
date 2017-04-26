@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var adventureSearch: UISearchBar!
@@ -23,13 +24,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedAuthor = UIImage()
     var selectedDate = ""
     
-    var isAuth = false
-    
-    var retrievedUserCreds = UserCreds()
-    
-    
-    let swiftKeychain = KeychainSwift()
+    var isAuth = true
 
+    
+    
     
     //Segue stuff//
     @IBAction func unwindToTable(sender: UIStoryboardSegue) {
@@ -140,22 +138,33 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.advTable.dataSource = self
         self.advTable.delegate = self
         
-        guard isAuth else {
-            self.performSegue(withIdentifier: "requireLogin", sender: Any?.self)
-            return
+        if let retrievedUserCreds = loadUserCredsIfAny() {
+            print("This is what loadUserCreds is returning: ", retrievedUserCreds)
+            print("The token of the loaded user is ", retrievedUserCreds.userToken)
+            isAuth = true
         }
-
+        else {
+            isAuth = false
+        }
         
+        if isAuth {//nothing to do here
+        print("User information is stored.")}
+        else {
+            self.performSegue(withIdentifier: "requireLogin", sender: Any?.self)
+        }
+        let retrievedUserCreds = loadUserCredsIfAny()
         
+//        qb.searchForSparseList(userObj: retrievedUserCreds!)
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    private func loadUserCredsIfAny() -> UserCreds? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: UserCreds.ArchiveURL.path) as? UserCreds
+    }
+    
 }
 
