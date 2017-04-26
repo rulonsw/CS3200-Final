@@ -38,6 +38,8 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>NSRemindersUsageDescription</string>
+		<string>NSCalendarsUsageDescription</string>
 	</array>
 	<key>UIStatusBarTintParameters</key>
 	<dict>

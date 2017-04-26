@@ -16,22 +16,41 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var campaignDateButt: UIButton!
     @IBOutlet weak var FancyBoyDaniel: UIImageView!
     
+    @IBAction func unwindtoChoiceMenu(segue: UIStoryboardSegue) {
+        
+    }
+    @IBAction func selectADateAction(_ sender: Any?) {
+        performSegue(withIdentifier: "campaignDateSegue", sender: Int(0))
+    }
+    @IBAction func selectGMSecretAction(_ sender: Any?) {
+        performSegue(withIdentifier: "playerSecretSegue", sender: Int(1))
+    }
+    @IBAction func selectAddPlayerAction(_ sender: Any) {
+        performSegue(withIdentifier: "addContactSegue", sender: Int(2))
+    }
+    
+    
+    //Segue stuff
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        //If user decides to set a campaign date
+        if(segue.identifier == "campaignDateSegue" || segue.identifier == "playerSecretSegue" || segue.identifier == "addContactSegue") {
+            guard let navToChoice = segue.destination as? SocialViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            let disButton = sender as! Int
+            
+            navToChoice.state = disButton
+
+        }
+
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        playerSecretButt.layer.borderColor = UIColor(red: 81/255, green: 159/255, blue: 243/255, alpha: 1).cgColor
-        announceButt.layer.borderColor = UIColor(red: 81/255, green: 159/255, blue: 243/255, alpha: 1).cgColor
-        campaignDateButt.layer.borderColor = UIColor(red: 81/255, green: 159/255, blue: 243/255, alpha: 1).cgColor
-        
-        playerSecretButt.layer.borderWidth = 2.5
-        announceButt.layer.borderWidth = 2.5
-        campaignDateButt.layer.borderWidth = 2.5
-        
-        playerSecretButt.layer.cornerRadius = 10
-        announceButt.layer.cornerRadius = 10
-        campaignDateButt.layer.cornerRadius = 10
         
 
     func didReceiveMemoryWarning() {

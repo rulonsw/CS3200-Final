@@ -14,6 +14,7 @@ class fullLogViewController: UIViewController {
     @IBOutlet weak var fullLogDesc: UILabel!
     @IBOutlet weak var fullLogBody: UITextView!
     @IBOutlet weak var logNavTitle: UINavigationItem!
+    var state = 0
     
     var adv = [
         "advTitle" : "",
@@ -28,10 +29,22 @@ class fullLogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullLogTitle.text = adv["advTitle"]
-        fullLogDesc.text = String("\" ")! + adv["advSub"]! + String("\"\n—")! + adv["advAuthor"]!
-        fullLogBody.text = adv["advBody"]
-        navBarTitle.title = adv["advDate"]
+        //If we're reading...
+        if(state == 0) {
+            fullLogTitle.text = adv["advTitle"]
+            fullLogDesc.text = String("\" ")! + adv["advSub"]! + String("\"\n—")! + adv["advAuthor"]!
+            fullLogBody.text = adv["advBody"]
+            navBarTitle.title = adv["advDate"]
+        }
+        //If we're writing...
+        else if (state == 1){
+            print("oh")
+        }
+        //If we're editing...
+        else {
+            print("Okay")
+        }
+
         
         // Do any additional setup after loading the view.
     }

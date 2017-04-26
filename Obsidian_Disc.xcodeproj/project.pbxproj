@@ -31,6 +31,7 @@
 		B499F77D1EB04308009D7F07 /* AdvLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499F77C1EB04308009D7F07 /* AdvLogData.swift */; };
 		B499F7801EB04332009D7F07 /* PlayerContactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499F77F1EB04332009D7F07 /* PlayerContactData.swift */; };
 		B4B4415C1EAECDF800EC7B4B /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */; };
+		B4B46BD21EB0BE7100A1F2CC /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46BD11EB0BE7100A1F2CC /* SocialViewController.swift */; };
 		B4CD948C1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */; };
 		B4ED7EBA1EB04E870032F1D4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED7EB81EB04E870032F1D4 /* Realm.framework */; };
 		B4ED7EBB1EB04E870032F1D4 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED7EB81EB04E870032F1D4 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -80,6 +81,7 @@
 		B499F77C1EB04308009D7F07 /* AdvLogData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvLogData.swift; sourceTree = "<group>"; };
 		B499F77F1EB04332009D7F07 /* PlayerContactData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerContactData.swift; sourceTree = "<group>"; };
 		B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
+		B4B46BD11EB0BE7100A1F2CC /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg; sourceTree = "<group>"; };
 		B4ED7EB81EB04E870032F1D4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B4ED7EB91EB04E870032F1D4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -137,12 +139,13 @@
 				B40F90371E92E9240028BBF7 /* convoIco */,
 				B440C4A21E92DAF200FAE230 /* dragonIco */,
 				B440C4821E92C87A00FAE230 /* AppDelegate.swift */,
+				B440C4881E92C87A00FAE230 /* Main.storyboard */,
 				B42611011EAEEBEC00EDC435 /* fullLogViewController.swift */,
 				B440C4841E92C87A00FAE230 /* FirstViewController.swift */,
 				B440C4861E92C87A00FAE230 /* SecondViewController.swift */,
+				B4B46BD11EB0BE7100A1F2CC /* SocialViewController.swift */,
 				B42611091EAEEBF600EDC435 /* AdventureLog.swift */,
 				B499F77E1EB0430F009D7F07 /* DataObjects */,
-				B440C4881E92C87A00FAE230 /* Main.storyboard */,
 				B43B6FD61EA9A02E00F1A70E /* logInHandler.swift */,
 				B440C48B1E92C87A00FAE230 /* Assets.xcassets */,
 				B440C48D1E92C87A00FAE230 /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			files = (
 				B44714C91EAF0D3500700329 /* userCreds.swift in Sources */,
 				B440C4871E92C87A00FAE230 /* SecondViewController.swift in Sources */,
+				B4B46BD21EB0BE7100A1F2CC /* SocialViewController.swift in Sources */,
 				B42611E61EAEED6800EDC435 /* OPResponseTypes.swift in Sources */,
 				B499F77D1EB04308009D7F07 /* AdvLogData.swift in Sources */,
 				B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */,

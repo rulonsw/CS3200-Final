@@ -12,11 +12,9 @@ import UIKit
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var adventureSearch: UISearchBar!
-    @IBOutlet weak var searchByLabel: UILabel!
-    @IBOutlet weak var sortRelevant: UIButton!
-    @IBOutlet weak var sortRecent: UIButton!
     @IBOutlet weak var advTable: UITableView!
     
+    @IBOutlet var addLogButt: UIBarButtonItem!
 
     var selectedTitle = ""
     var selectedDesc = ""
@@ -138,21 +136,21 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.advTable.dataSource = self
         self.advTable.delegate = self
         
-        if let retrievedUserCreds = loadUserCredsIfAny() {
-            print("This is what loadUserCreds is returning: ", retrievedUserCreds)
-            print("The token of the loaded user is ", retrievedUserCreds.userToken)
-            isAuth = true
-        }
-        else {
-            isAuth = false
-        }
-        
-        if isAuth {//nothing to do here
-        print("User information is stored.")}
-        else {
-            self.performSegue(withIdentifier: "requireLogin", sender: Any?.self)
-        }
-        let retrievedUserCreds = loadUserCredsIfAny()
+//        if let retrievedUserCreds = loadUserCredsIfAny() {
+////            print("This is what loadUserCreds is returning: ", retrievedUserCreds)
+////            print("The token of the loaded user is ", retrievedUserCreds.userToken)
+//            isAuth = true
+//        }
+//        else {
+//            isAuth = false
+//        }
+//        
+//        if isAuth {//nothing to do here
+//        print("User information is stored.")}
+//        else {
+//            self.performSegue(withIdentifier: "requireLogin", sender: Any?.self)
+//        }
+//        let retrievedUserCreds = loadUserCredsIfAny()
         
 //        qb.searchForSparseList(userObj: retrievedUserCreds!)
         
@@ -162,9 +160,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    private func loadUserCredsIfAny() -> UserCreds? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: UserCreds.ArchiveURL.path) as? UserCreds
-    }
+//    private func loadUserCredsIfAny() -> UserCreds? {
+//        return NSKeyedUnarchiver.unarchiveObject(withFile: UserCreds.ArchiveURL.path) as? UserCreds
+//    }
     
 }
 
