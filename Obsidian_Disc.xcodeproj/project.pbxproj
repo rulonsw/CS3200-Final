@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9ECDF3FB530D149AF5A0E833 /* Pods_Obsidian_Disc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACE5EAA6C6469BD2D38B8F4 /* Pods_Obsidian_Disc.framework */; };
 		B40F90341E92E9140028BBF7 /* convo.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90311E92E9140028BBF7 /* convo.png */; };
 		B40F90351E92E9140028BBF7 /* convo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90321E92E9140028BBF7 /* convo@2x.png */; };
 		B40F90361E92E9140028BBF7 /* convo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90331E92E9140028BBF7 /* convo@3x.png */; };
@@ -27,208 +26,34 @@
 		B440C4A01E92DAE400FAE230 /* dragon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49D1E92DAE400FAE230 /* dragon@2x.png */; };
 		B440C4A11E92DAE400FAE230 /* dragon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B440C49E1E92DAE400FAE230 /* dragon@3x.png */; };
 		B44714C91EAF0D3500700329 /* userCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44714C81EAF0D3500700329 /* userCreds.swift */; };
-		B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */; };
 		B47D49301E93224900F90A3F /* BarryBluejeans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */; };
+		B499F77A1EB03FD3009D7F07 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499F7791EB03FD3009D7F07 /* Just.swift */; };
+		B499F77D1EB04308009D7F07 /* AdvLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499F77C1EB04308009D7F07 /* AdvLogData.swift */; };
+		B499F7801EB04332009D7F07 /* PlayerContactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B499F77F1EB04332009D7F07 /* PlayerContactData.swift */; };
 		B4B4415C1EAECDF800EC7B4B /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */; };
-		B4CD94711EB007C100EA3F3C /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD94701EB007C100EA3F3C /* Just.swift */; };
 		B4CD948C1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */; };
+		B4ED7EBA1EB04E870032F1D4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED7EB81EB04E870032F1D4 /* Realm.framework */; };
+		B4ED7EBB1EB04E870032F1D4 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED7EB81EB04E870032F1D4 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4ED7EBC1EB04E870032F1D4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED7EB91EB04E870032F1D4 /* RealmSwift.framework */; };
+		B4ED7EBD1EB04E870032F1D4 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED7EB91EB04E870032F1D4 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B42611211EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_963;
-			remoteInfo = libc;
+/* Begin PBXCopyFilesBuildPhase section */
+		B4ED7EBE1EB04E870032F1D4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4ED7EBD1EB04E870032F1D4 /* RealmSwift.framework in Embed Frameworks */,
+				B4ED7EBB1EB04E870032F1D4 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B42611231EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_964;
-			remoteInfo = Core;
-		};
-		B42611251EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_965;
-			remoteInfo = CLibreSSL;
-		};
-		B42611271EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_966;
-			remoteInfo = Cipher;
-		};
-		B42611291EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_967;
-			remoteInfo = HMAC;
-		};
-		B426112B1EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_968;
-			remoteInfo = Essentials;
-		};
-		B426112D1EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_969;
-			remoteInfo = Random;
-		};
-		B426112F1EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_970;
-			remoteInfo = BCrypt;
-		};
-		B42611311EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_971;
-			remoteInfo = Hash;
-		};
-		B42611331EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_972;
-			remoteInfo = Socks;
-		};
-		B42611351EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_973;
-			remoteInfo = SocksCore;
-		};
-		B42611371EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_974;
-			remoteInfo = TLS;
-		};
-		B42611391EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_975;
-			remoteInfo = SMTP;
-		};
-		B426113B1EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_976;
-			remoteInfo = HTTP;
-		};
-		B426113D1EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_977;
-			remoteInfo = URI;
-		};
-		B426113F1EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_978;
-			remoteInfo = WebSockets;
-		};
-		B42611411EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_979;
-			remoteInfo = Transport;
-		};
-		B42611431EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_980;
-			remoteInfo = Sword;
-		};
-		B42611451EAEEC1900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = OBJ_981;
-			remoteInfo = FancyBoyDaniel;
-		};
-		B42611D71EAEEC7900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F435027A1A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
-		B42611D91EAEEC7900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
-			remoteInfo = OAuthSwiftOSX;
-		};
-		B42611DB1EAEEC7900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
-			remoteInfo = OAuthSwiftTVOS;
-		};
-		B42611DD1EAEEC7900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C40890C01C11B37000E3146A;
-			remoteInfo = OAuthSwiftWatchOS;
-		};
-		B42611DF1EAEEC7900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F451E3C5195B8CD80051434C;
-			remoteInfo = OAuthSwiftDemo;
-		};
-		B42611E11EAEEC7900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
-			remoteInfo = OAuthSwiftOSXDemo;
-		};
-		B42611E31EAEEC7900EDC435 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
-			remoteInfo = OAuthSwiftTests;
-		};
-		B44714AC1EAF04FD00700329 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F43502791A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		30F6BA990AFA4A7478C36E33 /* Pods-Obsidian_Disc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obsidian_Disc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc.release.xcconfig"; sourceTree = "<group>"; };
-		666384EFBA43A90B4DC7E641 /* Pods-Obsidian_Disc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obsidian_Disc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc.debug.xcconfig"; sourceTree = "<group>"; };
 		B40F90311E92E9140028BBF7 /* convo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = convo.png; sourceTree = "<group>"; };
 		B40F90321E92E9140028BBF7 /* convo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@2x.png"; sourceTree = "<group>"; };
 		B40F90331E92E9140028BBF7 /* convo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@3x.png"; sourceTree = "<group>"; };
@@ -236,8 +61,6 @@
 		B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ObsDisc_splash@2x.png"; sourceTree = "<group>"; };
 		B42611011EAEEBEC00EDC435 /* fullLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fullLogViewController.swift; sourceTree = "<group>"; };
 		B42611091EAEEBF600EDC435 /* AdventureLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLog.swift; sourceTree = "<group>"; };
-		B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FancyBoyDaniel.xcodeproj; path = Sword/FancyBoyDaniel.xcodeproj; sourceTree = "<group>"; };
-		B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		B42611E51EAEED6800EDC435 /* OPResponseTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPResponseTypes.swift; sourceTree = "<group>"; };
 		B43B6FD61EA9A02E00F1A70E /* logInHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logInHandler.swift; sourceTree = "<group>"; };
 		B440C47F1E92C87A00FAE230 /* Obsidian_Disc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Obsidian_Disc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,12 +75,14 @@
 		B440C49D1E92DAE400FAE230 /* dragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@2x.png"; sourceTree = "<group>"; };
 		B440C49E1E92DAE400FAE230 /* dragon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@3x.png"; sourceTree = "<group>"; };
 		B44714C81EAF0D3500700329 /* userCreds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userCreds.swift; sourceTree = "<group>"; };
-		B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarryBluejeans.jpg; sourceTree = "<group>"; };
+		B499F7791EB03FD3009D7F07 /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
+		B499F77C1EB04308009D7F07 /* AdvLogData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvLogData.swift; sourceTree = "<group>"; };
+		B499F77F1EB04332009D7F07 /* PlayerContactData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerContactData.swift; sourceTree = "<group>"; };
 		B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
-		B4CD94701EB007C100EA3F3C /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg; sourceTree = "<group>"; };
-		BACE5EAA6C6469BD2D38B8F4 /* Pods_Obsidian_Disc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Obsidian_Disc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4ED7EB81EB04E870032F1D4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		B4ED7EB91EB04E870032F1D4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,30 +90,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ECDF3FB530D149AF5A0E833 /* Pods_Obsidian_Disc.framework in Frameworks */,
+				B4ED7EBC1EB04E870032F1D4 /* RealmSwift.framework in Frameworks */,
+				B4ED7EBA1EB04E870032F1D4 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2FCA1C0969F0577213EDB301 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				666384EFBA43A90B4DC7E641 /* Pods-Obsidian_Disc.debug.xcconfig */,
-				30F6BA990AFA4A7478C36E33 /* Pods-Obsidian_Disc.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		66CE8E70458A283D3A730DEE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BACE5EAA6C6469BD2D38B8F4 /* Pods_Obsidian_Disc.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B40F90371E92E9240028BBF7 /* convoIco */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,55 +108,13 @@
 			name = convoIco;
 			sourceTree = "<group>";
 		};
-		B426110C1EAEEC1800EDC435 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B42611221EAEEC1900EDC435 /* libc.framework */,
-				B42611241EAEEC1900EDC435 /* Core.framework */,
-				B42611261EAEEC1900EDC435 /* CLibreSSL.framework */,
-				B42611281EAEEC1900EDC435 /* Cipher.framework */,
-				B426112A1EAEEC1900EDC435 /* HMAC.framework */,
-				B426112C1EAEEC1900EDC435 /* Essentials.framework */,
-				B426112E1EAEEC1900EDC435 /* Random.framework */,
-				B42611301EAEEC1900EDC435 /* BCrypt.framework */,
-				B42611321EAEEC1900EDC435 /* Hash.framework */,
-				B42611341EAEEC1900EDC435 /* Socks.framework */,
-				B42611361EAEEC1900EDC435 /* SocksCore.framework */,
-				B42611381EAEEC1900EDC435 /* TLS.framework */,
-				B426113A1EAEEC1900EDC435 /* SMTP.framework */,
-				B426113C1EAEEC1900EDC435 /* HTTP.framework */,
-				B426113E1EAEEC1900EDC435 /* URI.framework */,
-				B42611401EAEEC1900EDC435 /* WebSockets.framework */,
-				B42611421EAEEC1900EDC435 /* Transport.framework */,
-				B42611441EAEEC1900EDC435 /* Sword.framework */,
-				B42611461EAEEC1900EDC435 /* FancyBoyDaniel */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B42611CE1EAEEC7900EDC435 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B42611D81EAEEC7900EDC435 /* OAuthSwift.framework */,
-				B42611DA1EAEEC7900EDC435 /* OAuthSwift.framework */,
-				B42611DC1EAEEC7900EDC435 /* OAuthSwift.framework */,
-				B42611DE1EAEEC7900EDC435 /* OAuthSwift.framework */,
-				B42611E01EAEEC7900EDC435 /* OAuthSwiftDemo.app */,
-				B42611E21EAEEC7900EDC435 /* OAuthSwiftOSXDemo.app */,
-				B42611E41EAEEC7900EDC435 /* OAuthSwiftTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B440C4761E92C87A00FAE230 = {
 			isa = PBXGroup;
 			children = (
-				B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */,
-				B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */,
+				B4ED7EB81EB04E870032F1D4 /* Realm.framework */,
+				B4ED7EB91EB04E870032F1D4 /* RealmSwift.framework */,
 				B440C4811E92C87A00FAE230 /* Obsidian_Disc */,
 				B440C4801E92C87A00FAE230 /* Products */,
-				2FCA1C0969F0577213EDB301 /* Pods */,
-				66CE8E70458A283D3A730DEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -362,7 +129,7 @@
 		B440C4811E92C87A00FAE230 /* Obsidian_Disc */ = {
 			isa = PBXGroup;
 			children = (
-				B4CD94701EB007C100EA3F3C /* Just.swift */,
+				B499F77B1EB04002009D7F07 /* Things That Didn't Pan Out */,
 				B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */,
 				B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */,
 				B40F90381E92EA3C0028BBF7 /* ObsDisc_splash.png */,
@@ -374,15 +141,12 @@
 				B440C4841E92C87A00FAE230 /* FirstViewController.swift */,
 				B440C4861E92C87A00FAE230 /* SecondViewController.swift */,
 				B42611091EAEEBF600EDC435 /* AdventureLog.swift */,
+				B499F77E1EB0430F009D7F07 /* DataObjects */,
 				B440C4881E92C87A00FAE230 /* Main.storyboard */,
 				B43B6FD61EA9A02E00F1A70E /* logInHandler.swift */,
-				B44714C81EAF0D3500700329 /* userCreds.swift */,
-				B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */,
 				B440C48B1E92C87A00FAE230 /* Assets.xcassets */,
 				B440C48D1E92C87A00FAE230 /* LaunchScreen.storyboard */,
 				B440C4901E92C87A00FAE230 /* Info.plist */,
-				B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */,
-				B42611E51EAEED6800EDC435 /* OPResponseTypes.swift */,
 			);
 			path = Obsidian_Disc;
 			sourceTree = "<group>";
@@ -397,6 +161,26 @@
 			name = dragonIco;
 			sourceTree = "<group>";
 		};
+		B499F77B1EB04002009D7F07 /* Things That Didn't Pan Out */ = {
+			isa = PBXGroup;
+			children = (
+				B42611E51EAEED6800EDC435 /* OPResponseTypes.swift */,
+				B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */,
+				B499F7791EB03FD3009D7F07 /* Just.swift */,
+			);
+			name = "Things That Didn't Pan Out";
+			sourceTree = "<group>";
+		};
+		B499F77E1EB0430F009D7F07 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B44714C81EAF0D3500700329 /* userCreds.swift */,
+				B499F77C1EB04308009D7F07 /* AdvLogData.swift */,
+				B499F77F1EB04332009D7F07 /* PlayerContactData.swift */,
+			);
+			name = DataObjects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,17 +188,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B440C4931E92C87A00FAE230 /* Build configuration list for PBXNativeTarget "Obsidian_Disc" */;
 			buildPhases = (
-				3C5E0300205BDCFD63F03467 /* [CP] Check Pods Manifest.lock */,
 				B440C47B1E92C87A00FAE230 /* Sources */,
 				B440C47C1E92C87A00FAE230 /* Frameworks */,
 				B440C47D1E92C87A00FAE230 /* Resources */,
-				6C32D663B34FFC0059891089 /* [CP] Embed Pods Frameworks */,
-				B539B380BBAE7D4A9903FC68 /* [CP] Copy Pods Resources */,
+				B4ED7EBE1EB04E870032F1D4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B44714AD1EAF04FD00700329 /* PBXTargetDependency */,
 			);
 			name = Obsidian_Disc;
 			productName = Obsidian_Disc;
@@ -448,207 +229,12 @@
 			mainGroup = B440C4761E92C87A00FAE230;
 			productRefGroup = B440C4801E92C87A00FAE230 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = B426110C1EAEEC1800EDC435 /* Products */;
-					ProjectRef = B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */;
-				},
-				{
-					ProductGroup = B42611CE1EAEEC7900EDC435 /* Products */;
-					ProjectRef = B42611CD1EAEEC7900EDC435 /* OAuthSwift.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B440C47E1E92C87A00FAE230 /* Obsidian_Disc */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		B42611221EAEEC1900EDC435 /* libc.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = libc.framework;
-			remoteRef = B42611211EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611241EAEEC1900EDC435 /* Core.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Core.framework;
-			remoteRef = B42611231EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611261EAEEC1900EDC435 /* CLibreSSL.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CLibreSSL.framework;
-			remoteRef = B42611251EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611281EAEEC1900EDC435 /* Cipher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Cipher.framework;
-			remoteRef = B42611271EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B426112A1EAEEC1900EDC435 /* HMAC.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = HMAC.framework;
-			remoteRef = B42611291EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B426112C1EAEEC1900EDC435 /* Essentials.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Essentials.framework;
-			remoteRef = B426112B1EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B426112E1EAEEC1900EDC435 /* Random.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Random.framework;
-			remoteRef = B426112D1EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611301EAEEC1900EDC435 /* BCrypt.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = BCrypt.framework;
-			remoteRef = B426112F1EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611321EAEEC1900EDC435 /* Hash.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Hash.framework;
-			remoteRef = B42611311EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611341EAEEC1900EDC435 /* Socks.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Socks.framework;
-			remoteRef = B42611331EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611361EAEEC1900EDC435 /* SocksCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SocksCore.framework;
-			remoteRef = B42611351EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611381EAEEC1900EDC435 /* TLS.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TLS.framework;
-			remoteRef = B42611371EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B426113A1EAEEC1900EDC435 /* SMTP.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SMTP.framework;
-			remoteRef = B42611391EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B426113C1EAEEC1900EDC435 /* HTTP.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = HTTP.framework;
-			remoteRef = B426113B1EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B426113E1EAEEC1900EDC435 /* URI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = URI.framework;
-			remoteRef = B426113D1EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611401EAEEC1900EDC435 /* WebSockets.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WebSockets.framework;
-			remoteRef = B426113F1EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611421EAEEC1900EDC435 /* Transport.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Transport.framework;
-			remoteRef = B42611411EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611441EAEEC1900EDC435 /* Sword.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Sword.framework;
-			remoteRef = B42611431EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611461EAEEC1900EDC435 /* FancyBoyDaniel */ = {
-			isa = PBXReferenceProxy;
-			fileType = text;
-			path = FancyBoyDaniel;
-			remoteRef = B42611451EAEEC1900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611D81EAEEC7900EDC435 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = B42611D71EAEEC7900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611DA1EAEEC7900EDC435 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = B42611D91EAEEC7900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611DC1EAEEC7900EDC435 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = B42611DB1EAEEC7900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611DE1EAEEC7900EDC435 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = B42611DD1EAEEC7900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611E01EAEEC7900EDC435 /* OAuthSwiftDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftDemo.app;
-			remoteRef = B42611DF1EAEEC7900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611E21EAEEC7900EDC435 /* OAuthSwiftOSXDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftOSXDemo.app;
-			remoteRef = B42611E11EAEEC7900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B42611E41EAEEC7900EDC435 /* OAuthSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OAuthSwiftTests.xctest;
-			remoteRef = B42611E31EAEEC7900EDC435 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B440C47D1E92C87A00FAE230 /* Resources */ = {
@@ -673,54 +259,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3C5E0300205BDCFD63F03467 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6C32D663B34FFC0059891089 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B539B380BBAE7D4A9903FC68 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B440C47B1E92C87A00FAE230 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -729,26 +267,19 @@
 				B44714C91EAF0D3500700329 /* userCreds.swift in Sources */,
 				B440C4871E92C87A00FAE230 /* SecondViewController.swift in Sources */,
 				B42611E61EAEED6800EDC435 /* OPResponseTypes.swift in Sources */,
+				B499F77D1EB04308009D7F07 /* AdvLogData.swift in Sources */,
 				B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */,
 				B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */,
-				B4CD94711EB007C100EA3F3C /* Just.swift in Sources */,
+				B499F77A1EB03FD3009D7F07 /* Just.swift in Sources */,
 				B42611021EAEEBEC00EDC435 /* fullLogViewController.swift in Sources */,
 				B426110A1EAEEBF600EDC435 /* AdventureLog.swift in Sources */,
-				B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */,
+				B499F7801EB04332009D7F07 /* PlayerContactData.swift in Sources */,
 				B4B4415C1EAECDF800EC7B4B /* QueryBuilder.swift in Sources */,
 				B43B6FD71EA9A02E00F1A70E /* logInHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B44714AD1EAF04FD00700329 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OAuthSwift;
-			targetProxy = B44714AC1EAF04FD00700329 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B440C4881E92C87A00FAE230 /* Main.storyboard */ = {
@@ -867,9 +398,12 @@
 		};
 		B440C4941E92C87A00FAE230 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 666384EFBA43A90B4DC7E641 /* Pods-Obsidian_Disc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Obsidian_Disc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CS3200.Obsidian-Disc";
@@ -880,9 +414,12 @@
 		};
 		B440C4951E92C87A00FAE230 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30F6BA990AFA4A7478C36E33 /* Pods-Obsidian_Disc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Obsidian_Disc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CS3200.Obsidian-Disc";
