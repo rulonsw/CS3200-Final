@@ -13,7 +13,3 @@ class Contact: Object {
     dynamic var name: String = ""
     dynamic var phonenumber: String = ""
 }
-
-class ContactList: Object {
-    let contacts: list<Contact>()
-}
