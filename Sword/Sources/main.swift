@@ -1,5 +1,6 @@
 import Sword
 
+    
 let bot = Sword(token: "MzA2MDY5MjExNTAxODIxOTUz.C-A_tQ.8tBeOVu46mlP9Sv72eI4gP14uyA")
 
 bot.on(.ready) { _ in

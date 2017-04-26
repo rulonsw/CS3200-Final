@@ -7,9 +7,10 @@
 //
 
 import UIKit
+//import Sword
 
 class SecondViewController: UIViewController {
-
+    @IBOutlet weak var botStatusLabel: UILabel!
     @IBOutlet weak var playerSecretButt: UIButton!
     @IBOutlet weak var announceButt: UIButton!
     @IBOutlet weak var campaignDateButt: UIButton!
@@ -31,14 +32,13 @@ class SecondViewController: UIViewController {
         playerSecretButt.layer.cornerRadius = 10
         announceButt.layer.cornerRadius = 10
         campaignDateButt.layer.cornerRadius = 10
+        
 
-    }
-
-    override func didReceiveMemoryWarning() {
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 
 }
-
+}
