@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		687857E570EE70E99B117187 /* Pods_Obsidian_Disc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2052A958268FC2A203A4C26B /* Pods_Obsidian_Disc.framework */; };
+		9ECDF3FB530D149AF5A0E833 /* Pods_Obsidian_Disc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACE5EAA6C6469BD2D38B8F4 /* Pods_Obsidian_Disc.framework */; };
 		B40F90341E92E9140028BBF7 /* convo.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90311E92E9140028BBF7 /* convo.png */; };
 		B40F90351E92E9140028BBF7 /* convo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90321E92E9140028BBF7 /* convo@2x.png */; };
 		B40F90361E92E9140028BBF7 /* convo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F90331E92E9140028BBF7 /* convo@3x.png */; };
@@ -30,6 +30,8 @@
 		B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */; };
 		B47D49301E93224900F90A3F /* BarryBluejeans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */; };
 		B4B4415C1EAECDF800EC7B4B /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */; };
+		B4CD94711EB007C100EA3F3C /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD94701EB007C100EA3F3C /* Just.swift */; };
+		B4CD948C1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,9 +227,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2052A958268FC2A203A4C26B /* Pods_Obsidian_Disc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Obsidian_Disc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61A7BE11529DA151EDEDFA4F /* Pods-Obsidian_Disc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obsidian_Disc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc.release.xcconfig"; sourceTree = "<group>"; };
-		9E4CB46A0F220F614F96496F /* Pods-Obsidian_Disc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obsidian_Disc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc.debug.xcconfig"; sourceTree = "<group>"; };
+		30F6BA990AFA4A7478C36E33 /* Pods-Obsidian_Disc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obsidian_Disc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc.release.xcconfig"; sourceTree = "<group>"; };
+		666384EFBA43A90B4DC7E641 /* Pods-Obsidian_Disc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Obsidian_Disc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc.debug.xcconfig"; sourceTree = "<group>"; };
 		B40F90311E92E9140028BBF7 /* convo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = convo.png; sourceTree = "<group>"; };
 		B40F90321E92E9140028BBF7 /* convo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@2x.png"; sourceTree = "<group>"; };
 		B40F90331E92E9140028BBF7 /* convo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convo@3x.png"; sourceTree = "<group>"; };
@@ -254,6 +255,9 @@
 		B45CB5291E97EC65005FD753 /* ChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceTableViewCell.swift; sourceTree = "<group>"; };
 		B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarryBluejeans.jpg; sourceTree = "<group>"; };
 		B4B4415B1EAECDF800EC7B4B /* QueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
+		B4CD94701EB007C100EA3F3C /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
+		B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg; sourceTree = "<group>"; };
+		BACE5EAA6C6469BD2D38B8F4 /* Pods_Obsidian_Disc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Obsidian_Disc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,26 +265,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				687857E570EE70E99B117187 /* Pods_Obsidian_Disc.framework in Frameworks */,
+				9ECDF3FB530D149AF5A0E833 /* Pods_Obsidian_Disc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2EDDDB8E8DDF4EF07222CC46 /* Pods */ = {
+		2FCA1C0969F0577213EDB301 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9E4CB46A0F220F614F96496F /* Pods-Obsidian_Disc.debug.xcconfig */,
-				61A7BE11529DA151EDEDFA4F /* Pods-Obsidian_Disc.release.xcconfig */,
+				666384EFBA43A90B4DC7E641 /* Pods-Obsidian_Disc.debug.xcconfig */,
+				30F6BA990AFA4A7478C36E33 /* Pods-Obsidian_Disc.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8926226BDA28DC31B72EAC50 /* Frameworks */ = {
+		66CE8E70458A283D3A730DEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2052A958268FC2A203A4C26B /* Pods_Obsidian_Disc.framework */,
+				BACE5EAA6C6469BD2D38B8F4 /* Pods_Obsidian_Disc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -342,8 +346,8 @@
 				B426110B1EAEEC1800EDC435 /* FancyBoyDaniel.xcodeproj */,
 				B440C4811E92C87A00FAE230 /* Obsidian_Disc */,
 				B440C4801E92C87A00FAE230 /* Products */,
-				2EDDDB8E8DDF4EF07222CC46 /* Pods */,
-				8926226BDA28DC31B72EAC50 /* Frameworks */,
+				2FCA1C0969F0577213EDB301 /* Pods */,
+				66CE8E70458A283D3A730DEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -358,6 +362,8 @@
 		B440C4811E92C87A00FAE230 /* Obsidian_Disc */ = {
 			isa = PBXGroup;
 			children = (
+				B4CD94701EB007C100EA3F3C /* Just.swift */,
+				B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */,
 				B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */,
 				B40F90381E92EA3C0028BBF7 /* ObsDisc_splash.png */,
 				B40F90391E92EA3C0028BBF7 /* ObsDisc_splash@2x.png */,
@@ -398,12 +404,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B440C4931E92C87A00FAE230 /* Build configuration list for PBXNativeTarget "Obsidian_Disc" */;
 			buildPhases = (
-				7937126CEA3CF0BC87779E29 /* [CP] Check Pods Manifest.lock */,
+				3C5E0300205BDCFD63F03467 /* [CP] Check Pods Manifest.lock */,
 				B440C47B1E92C87A00FAE230 /* Sources */,
 				B440C47C1E92C87A00FAE230 /* Frameworks */,
 				B440C47D1E92C87A00FAE230 /* Resources */,
-				A94D82B803E1570D72A4D893 /* [CP] Embed Pods Frameworks */,
-				097BE551F5FBFA591BC74568 /* [CP] Copy Pods Resources */,
+				6C32D663B34FFC0059891089 /* [CP] Embed Pods Frameworks */,
+				B539B380BBAE7D4A9903FC68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -653,6 +659,7 @@
 				B440C48F1E92C87A00FAE230 /* LaunchScreen.storyboard in Resources */,
 				B40F903A1E92EA3C0028BBF7 /* ObsDisc_splash.png in Resources */,
 				B440C4A11E92DAE400FAE230 /* dragon@3x.png in Resources */,
+				B4CD948C1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg in Resources */,
 				B47D49301E93224900F90A3F /* BarryBluejeans.jpg in Resources */,
 				B440C48C1E92C87A00FAE230 /* Assets.xcassets in Resources */,
 				B440C48A1E92C87A00FAE230 /* Main.storyboard in Resources */,
@@ -667,22 +674,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		097BE551F5FBFA591BC74568 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7937126CEA3CF0BC87779E29 /* [CP] Check Pods Manifest.lock */ = {
+		3C5E0300205BDCFD63F03467 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -697,7 +689,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A94D82B803E1570D72A4D893 /* [CP] Embed Pods Frameworks */ = {
+		6C32D663B34FFC0059891089 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -712,6 +704,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B539B380BBAE7D4A9903FC68 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Obsidian_Disc/Pods-Obsidian_Disc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -724,6 +731,7 @@
 				B42611E61EAEED6800EDC435 /* OPResponseTypes.swift in Sources */,
 				B440C4831E92C87A00FAE230 /* AppDelegate.swift in Sources */,
 				B440C4851E92C87A00FAE230 /* FirstViewController.swift in Sources */,
+				B4CD94711EB007C100EA3F3C /* Just.swift in Sources */,
 				B42611021EAEEBEC00EDC435 /* fullLogViewController.swift in Sources */,
 				B426110A1EAEEBF600EDC435 /* AdventureLog.swift in Sources */,
 				B45CB52A1E97EC65005FD753 /* ChoiceTableViewCell.swift in Sources */,
@@ -859,7 +867,7 @@
 		};
 		B440C4941E92C87A00FAE230 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E4CB46A0F220F614F96496F /* Pods-Obsidian_Disc.debug.xcconfig */;
+			baseConfigurationReference = 666384EFBA43A90B4DC7E641 /* Pods-Obsidian_Disc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Obsidian_Disc/Info.plist;
@@ -872,7 +880,7 @@
 		};
 		B440C4951E92C87A00FAE230 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A7BE11529DA151EDEDFA4F /* Pods-Obsidian_Disc.release.xcconfig */;
+			baseConfigurationReference = 30F6BA990AFA4A7478C36E33 /* Pods-Obsidian_Disc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Obsidian_Disc/Info.plist;

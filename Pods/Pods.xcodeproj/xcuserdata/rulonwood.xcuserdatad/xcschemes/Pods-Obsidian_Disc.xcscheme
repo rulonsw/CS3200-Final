@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2C31654D118C792FD767F824FD24364A"
+               BlueprintIdentifier = "5CD85B7A9EDD40C8F5A41F44EE5A9985"
                BuildableName = "Pods_Obsidian_Disc.framework"
                BlueprintName = "Pods-Obsidian_Disc"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2C31654D118C792FD767F824FD24364A"
+            BlueprintIdentifier = "5CD85B7A9EDD40C8F5A41F44EE5A9985"
             BuildableName = "Pods_Obsidian_Disc.framework"
             BlueprintName = "Pods-Obsidian_Disc"
             ReferencedContainer = "container:Pods.xcodeproj">
