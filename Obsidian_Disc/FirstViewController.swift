@@ -15,6 +15,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var advTable: UITableView!
     
     @IBOutlet var addLogButt: UIBarButtonItem!
+    @IBAction func selectAddLog(_ sender: Any) {
+        performSegue(withIdentifier: "addNewLogSegue", sender: Int(1))
+    }
 
     var selectedTitle = ""
     var selectedDesc = ""
@@ -35,23 +38,37 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         //If user decides to take a look at an adventure log
-        if(segue.identifier == "TheScoop") {
+        if(segue.identifier == "TheScoop" || segue.identifier == "addNewLogSegue") {
             guard let navToFullLog = segue.destination as? UINavigationController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-        
-            guard let adventureCell = sender as? AdventureLog else {
-                fatalError("Unexpected sender: \(sender)")
-            }
-        
-            guard let indexPath = advTable.indexPathForSelectedRow else {
-                fatalError("The selected cell is not being displayed by the table")
-            }
             
-            let selectedLog = adventureArray[indexPath.row]
+            // Define the target we're aiming for
             let fullLog = navToFullLog.viewControllers.first as! fullLogViewController
-            fullLog.adv = selectedLog
+
+            if segue.identifier == "TheScoop" {
+                guard let adventureCell = sender as? AdventureLog else {
+                    fatalError("Unexpected sender: \(sender)")
+                }
+                
+                guard let indexPath = advTable.indexPathForSelectedRow else {
+                    fatalError("The selected cell is not being displayed by the table")
+                }
+                let selectedLog = adventureArray[indexPath.row]
+                fullLog.adv = selectedLog
+                
+            }
+            else {
+                let adventureAdd = sender as! Int
+
+                fullLog.state = adventureAdd
+                
+            }
+
+            
+
         }
+
         
     }
     ///////////////
@@ -68,10 +85,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let cellId = "logCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath as IndexPath) as? AdventureLog else {
-            print("Something went horribly wrong here.")
-            exit(1)
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath as IndexPath) as! AdventureLog
+        
         print("Table cell \(indexPath.row) selected for sending")
         var selectedAdventure = adventureArray[indexPath.row]
         selectedTitle = selectedAdventure["advTitle"]!

@@ -8,12 +8,53 @@
 
 import UIKit
 import MessageUI
+import RealmSwift
 
-class SocialViewController: UIViewController, MFMessageComposeViewControllerDelegate, UITextViewDelegate {
+class SocialViewController: UIViewController, MFMessageComposeViewControllerDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    // MARK: Realm setup
+    var contacts = List<Contact>()
+    var notificationToken: NotificationToken!
+    var realm: Realm!
+    func setupRealm() {
+        let username = "rulonsdangerwoodiv+realm_cs3200@gmail.com"
+        let password = "asdfasdf"
+        
+        SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false), server: URL(string: "http://127.0.0.1:9080")!) { user, error in
+            guard let user = user else {
+                fatalError(String(describing: error))
+            }
+            
+            DispatchQueue.main.async {
+                // Open Realm
+                let configuration = Realm.Configuration(
+                    syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: "realm://127.0.0.1:9080/~/obs-disc")!)
+                )
+                self.realm = try! Realm(configuration: configuration)
+                
+                // Show initial tasks
+                func updateList() {
+                    if self.contacts.realm == nil, let list = self.realm.objects(ContactList.self).first {
+                        self.contacts = list.contacts
+                    }
+                    self.singleContactPicker.reloadAllComponents()
+                }
+                updateList()
+                
+                // Notify us when Realm changes
+                self.notificationToken = self.realm.addNotificationBlock { _ in
+                    updateList()
+                }
+            }
+        }
+    }
+    deinit {
+        notificationToken.stop()
+    }
+    
     
     var state = 0
 
-    @IBOutlet weak var addContactButt: UIBarButtonItem!
     @IBOutlet weak var backCancelButt: UIBarButtonItem!
     
     @IBOutlet weak var reminderText: UITextField!
@@ -26,7 +67,7 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
     @IBOutlet weak var singleContactPicker: UIPickerView!
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    // MARK: Making my own textview placeholder text
+// MARK: Making my own textview placeholder text
     //Since textviews don't have placeholders...
     func textViewDidBeginEditing(_ tv: UITextView) {
         if tv.textColor == UIColor.lightGray {
@@ -42,22 +83,53 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
         }
     }
     
+//MARK: Contact Picker Setup
+    func numberOfComponents(in: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent: Int) -> Int {
+        return contacts.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let contactsSorted = contacts.sorted(byKeyPath: "name", ascending: true)
+        return contactsSorted[row].name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent: Int) {
+        let contactsSorted = contacts.sorted(byKeyPath: "name", ascending: true)
+        updateUneditablePhoneNumberField(contactName: contactsSorted[row].name)
+    }
+
+    
     @IBAction func submitAction(_ sender: Any) {
         if (state == 1) {
             sendMessage(body: messageTextEntry.text, recipient: phoneNumberEntry.text!)
         }
+        else if state == 2 {
+            addContact()
+            
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupRealm()
+        
+//MARK: Delegate/DataSource Settings
         messageTextEntry.delegate = self
         reminderText.delegate = self
         phoneNumberEntry.delegate = self
+        singleContactPicker.delegate = self
+        singleContactPicker.dataSource = self
+        
+        
+//MARK: Keyboard defaults
         phoneNumberEntry.keyboardType = UIKeyboardType.numberPad
         
+// Set campaign date
         if (state == 0) {
             backCancelButt.title = "<"
-            addContactButt.isEnabled = false
-            addContactButt.title = ""
             campaignDatePicker.isHidden = false
             reminderText.isHidden = false
             messageTextEntry.isHidden = true
@@ -67,33 +139,30 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
             self.title = "Campaign Date Selection"
             actionSubmitButt.setTitle("Set Reminder", for: UIControlState.normal)
         }
+// Send player secret
         else if (state == 1) {
-            backCancelButt.title = "<"
-            addContactButt.title = ""
-            addContactButt.isEnabled = false
-            
+            let burp = contacts
+            print(burp)
             phoneNumberEntry.isHidden = false
-            messageTextEntry.isHidden = false
+            phoneNumberEntry.isEnabled = false
+            
+            messageTextEntry.isHidden = true
             reminderText.isHidden = true
             singleContactPicker.isHidden = false
             welcomeLabel.text = "Which contact will you reach out to?"
             self.title = "Share GM Secret"
         }
+// Add player (contacts mgmt)
         else {
-            addContactButt.isEnabled = true
             phoneNumberEntry.isHidden = false
             reminderText.isHidden = false
             reminderText.placeholder = "Contact Name"
-            addContactButt.title = "+"
             backCancelButt.title = "Cancel"
             welcomeLabel.text = "Please enter the name and phone\nnumber of your new contact."
             actionSubmitButt.setTitle("Add Contact", for: UIControlState.normal)
 
         }
-        campaignDatePicker.date.description
-        
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,10 +171,26 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
     }
     
 
-    
-    // MARK: - Messaging
-    
-    //Note: I have no idea if this actually works because I don't own an iPhone to test it on.
+// MARK: - Action definitions]
+    func updateUneditablePhoneNumberField(contactName: String) {
+        let phone = contacts.filter("name contains '" + contactName + "'").first?.phonenumber
+        self.phoneNumberEntry.text = phone
+    }
+    func addContact() {
+        guard let contactName = reminderText.text,
+            let contactPhoneNumber = phoneNumberEntry.text,
+            !contactName.isEmpty,
+            !contactPhoneNumber.isEmpty else { return }
+        let contacts = self.contacts
+        try! contacts.realm?.write {
+            contacts.append(Contact(value: ["name": contactName,"phonenumber": contactPhoneNumber]))
+        }
+    //Successful addition
+        let alert = UIAlertController(title: "Contact Addition Successful", message: "Your player should now be present in your \"Send Player Secret\" contact picker.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Great!", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    //Note: I have no idea if this actually works because I don't own an actual iPhone to test it on.
     //However, I am semi-confident this will do what it's supposed to on an actual device.
     
     func sendMessage(body: String, recipient: String) {

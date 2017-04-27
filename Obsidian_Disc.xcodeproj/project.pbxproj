@@ -76,6 +76,7 @@
 		B440C49D1E92DAE400FAE230 /* dragon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@2x.png"; sourceTree = "<group>"; };
 		B440C49E1E92DAE400FAE230 /* dragon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dragon@3x.png"; sourceTree = "<group>"; };
 		B44714C81EAF0D3500700329 /* userCreds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userCreds.swift; sourceTree = "<group>"; };
+		B44D99101EB18687007ED35B /* Obsidian_Disc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Obsidian_Disc.entitlements; sourceTree = "<group>"; };
 		B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarryBluejeans.jpg; sourceTree = "<group>"; };
 		B499F7791EB03FD3009D7F07 /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		B499F77C1EB04308009D7F07 /* AdvLogData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvLogData.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 		B440C4811E92C87A00FAE230 /* Obsidian_Disc */ = {
 			isa = PBXGroup;
 			children = (
+				B44D99101EB18687007ED35B /* Obsidian_Disc.entitlements */,
 				B499F77B1EB04002009D7F07 /* Things That Didn't Pan Out */,
 				B4CD948B1EB0297000EA3F3C /* Tumblr_m2swe9AfgD1qa3nkyo1_500.jpg */,
 				B47D492F1E93224900F90A3F /* BarryBluejeans.jpg */,
@@ -217,7 +219,13 @@
 				TargetAttributes = {
 					B440C47E1E92C87A00FAE230 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2MAC6LV5NL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -404,6 +412,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Obsidian_Disc/Obsidian_Disc.entitlements;
+				DEVELOPMENT_TEAM = 2MAC6LV5NL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -420,6 +430,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Obsidian_Disc/Obsidian_Disc.entitlements;
+				DEVELOPMENT_TEAM = 2MAC6LV5NL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
