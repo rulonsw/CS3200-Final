@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class SocialViewController: UIViewController, MFMessageComposeViewControllerDelegate {
+class SocialViewController: UIViewController, MFMessageComposeViewControllerDelegate, UITextViewDelegate {
     
     var state = 0
 
@@ -26,13 +26,30 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
     @IBOutlet weak var singleContactPicker: UIPickerView!
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    // MARK: Making my own textview placeholder text
+    //Since textviews don't have placeholders...
+    func textViewDidBeginEditing(_ tv: UITextView) {
+        if tv.textColor == UIColor.lightGray {
+            tv.text = ""
+            tv.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ tv: UITextView) {
+        if tv.text.isEmpty {
+            tv.text = "Enter Message Here..."
+            tv.textColor = UIColor.lightGray
+        }
+    }
+    
     @IBAction func submitAction(_ sender: Any) {
         if (state == 1) {
-            sendMessage(body: "Testing", recipient: phoneNumberEntry.text!)
+            sendMessage(body: messageTextEntry.text, recipient: phoneNumberEntry.text!)
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageTextEntry.delegate = self
         reminderText.delegate = self
         phoneNumberEntry.delegate = self
         phoneNumberEntry.keyboardType = UIKeyboardType.numberPad
@@ -70,6 +87,8 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
             addContactButt.title = "+"
             backCancelButt.title = "Cancel"
             welcomeLabel.text = "Please enter the name and phone\nnumber of your new contact."
+            actionSubmitButt.setTitle("Add Contact", for: UIControlState.normal)
+
         }
         campaignDatePicker.date.description
         
