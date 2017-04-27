@@ -8,15 +8,17 @@
 import Foundation
 import RealmSwift
 
+class LogList: Object {
+    dynamic var campaignName = ""
+    let allLogs = List<Log>()
+    
+}
 class Log: Object {
     dynamic var title = ""
     dynamic var desc = ""
     dynamic var date = Date()
     dynamic var body = ""
-    dynamic var belongsToCampaign: LogList?
     
 }
 
-class LogList: Object {
-    dynamic var campaignName = ""
-}
+

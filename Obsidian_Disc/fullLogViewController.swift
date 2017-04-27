@@ -7,11 +7,65 @@
 //
 
 import UIKit
+import RealmSwift
 
 class fullLogViewController: UIViewController, UITextViewDelegate {
+    
+    //MARK: Adventure Log Realm
+    
+    //Not sure if I need this on this view controller too, but it doesn't hurt to be safe.
+    var adventures = List<Log>()
+    var notificationToken: NotificationToken!
+    var realm: Realm!
+    func setupRealm() {
+        let username = "rulonsdangerwoodiv+cs3200@gmail.com"
+        let password = "asdfasdf"
+        
+        SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false), server: URL(string: "http://127.0.0.1:9080")!) { user, error in
+            guard let user = user else {
+                fatalError(String(describing: error))
+            }
+            
+            DispatchQueue.main.async {
+                // Open Realm
+                let configuration = Realm.Configuration(
+                    syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: "realm://127.0.0.1:9080/~/obs-disc")!)
+                )
+                self.realm = try! Realm(configuration: configuration)
+                
+                // Show initial tasks
+                func updateList() {
+                    if self.adventures.realm == nil, let list = self.realm.objects(LogList.self).first {
+                        self.adventures = list.allLogs
+                    }
+                }
+                updateList()
+                
+                // Notify us when Realm changes
+                self.notificationToken = self.realm.addNotificationBlock { _ in
+                    updateList()
+                }
+            }
+        }
+    }
+ 
+    
+    //MARK: Declarations
+    //Controlling what elements are visible at any given time
+    var state = 0
+    
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        if state == 1 {
+            self.addLogToRealm()
+        }
+        self.dismiss(animated: true, completion: {
+            //nothing to do here
+        })
+
+    }
+    
     @IBOutlet var newAdventureTitleField: UITextField!
     @IBOutlet var newAdventureDescField: UITextField!
-
 
     @IBOutlet var cancelButt: UIBarButtonItem!
     @IBOutlet weak var doneButt: UIBarButtonItem!
@@ -20,8 +74,7 @@ class fullLogViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var fullLogBody: UITextView!
     @IBOutlet weak var logNavTitle: UINavigationItem!
     
-    //Controlling what elements are visible at any given time
-    var state = 0
+
     
     
     // MARK: Making my own textview placeholder text
@@ -39,27 +92,21 @@ class fullLogViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    var adv = [
-        "advTitle" : "",
-        "advSub" : "",
-        "advBody" : "",
-        "advDate" : "",
-        "advAuthor": ""
-    ]
+    var adv = Log()
     
     @IBOutlet weak var navBarTitle: UINavigationItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupRealm()
         
         //If we're reading...
         if(state == 0) {
-            fullLogTitle.text = adv["advTitle"]
-            fullLogDesc.text = String("\" ")! + adv["advSub"]! + String("\"\n—")! + adv["advAuthor"]!
-            fullLogBody.text = adv["advBody"]
-            navBarTitle.title = adv["advDate"]
+            fullLogTitle.text = adv.title
+            fullLogDesc.text = adv.desc
+            fullLogBody.text = adv.body
+            navBarTitle.title = adv.title
             
         }
         //If we're writing...
@@ -96,6 +143,19 @@ class fullLogViewController: UIViewController, UITextViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addLogToRealm() {
+        guard let adventureTitle = newAdventureTitleField.text,
+            let adventureDesc = newAdventureDescField.text,
+            let adventureBody = fullLogBody.text,
+            !adventureTitle.isEmpty,
+            !adventureBody.isEmpty else { return }
+        print("got here")
+        let adventures = self.adventures
+        try! adventures.realm?.write {
+            adventures.append(Log(value: ["title": adventureTitle, "desc":adventureDesc, "date": Date(), "body":adventureBody]))
+        }
     }
     
 

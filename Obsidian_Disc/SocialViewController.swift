@@ -9,15 +9,94 @@
 import UIKit
 import MessageUI
 import RealmSwift
+import EventKit
 
 class SocialViewController: UIViewController, MFMessageComposeViewControllerDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    // MARK: Event Store Things
+    let eventStore = EKEventStore()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        checkCalendarAuthorizationStatus()
+    }
+    
+    func addEventToCalendar() {
+        let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
+        if status == EKAuthorizationStatus.authorized {
+            let calendarForEvent = eventStore.defaultCalendarForNewEvents
+            let newEvent = EKEvent(eventStore: eventStore)
+            
+            newEvent.calendar = calendarForEvent
+            newEvent.title = "Obsidian Disc Campaign Reminder"
+            if (reminderText.text?.isEmpty)! {
+                newEvent.notes = "Don't forget the dice!"
+            } else { newEvent.notes = reminderText.text }
+            newEvent.startDate = self.campaignDatePicker.date
+            newEvent.endDate = self.campaignDatePicker.date.addingTimeInterval(3600)
+            
+            // Save the calendar using the Event Store instance
+        
+            do {
+                try eventStore.save(newEvent, span: .thisEvent, commit: true)
+                let alert = UIAlertController(title: "Event saved", message: ("Event was saved to calendar. Don't believe me? Go check!"), preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(OKAction)
+                self.present(alert, animated: true, completion: nil)
+            } catch {
+                let alert = UIAlertController(title: "Event could not save", message: (error as NSError).localizedDescription, preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(OKAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        else {
+            let alert = UIAlertController(title: "Give the app permission to your calendar.", message: ("The app must be authorized to use your calendar before it may save reminders for you."), preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(OKAction)
+        }
+        
+    }
+    
+    func checkCalendarAuthorizationStatus() {
+        let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
+        
+        switch (status) {
+        case EKAuthorizationStatus.notDetermined:
+            // This happens on first-run
+            requestAccessToCalendar()
+        case EKAuthorizationStatus.authorized:
+            print("Great job!")
+            // Things are in line with being able to show the calendars in the table view
+        case EKAuthorizationStatus.restricted, EKAuthorizationStatus.denied:
+            // We need to help them give us permission
+            let alert = UIAlertController(title: "This Area Will Not Work", message: "In order to use this feature, calendar authorization must be granted.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Boo!", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func requestAccessToCalendar() {
+        eventStore.requestAccess(to: EKEntityType.event, completion: {
+            (accessGranted: Bool, error: Error?) in
+            
+            if accessGranted == true {
+                self.addEventToCalendar()
+                
+            } else {
+                DispatchQueue.main.async(execute: {
+            let alert = UIAlertController(title: "This Area Will Not Work", message: "In order to use this feature, calendar authorization must be granted.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Boo!", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)                })
+            }
+        })
+    }
     
     // MARK: Realm setup
     var contacts = List<Contact>()
     var notificationToken: NotificationToken!
     var realm: Realm!
     func setupRealm() {
-        let username = "rulonsdangerwoodiv+realm_cs3200@gmail.com"
+        let username = "rulonsdangerwoodiv+cs3200@gmail.com"
         let password = "asdfasdf"
         
         SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false), server: URL(string: "http://127.0.0.1:9080")!) { user, error in
@@ -104,10 +183,13 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
 
     
     @IBAction func submitAction(_ sender: Any) {
-        if (state == 1) {
+        if state == 0 {
+            addEventToCalendar()
+        }
+        else if state == 1 {
             sendMessage(body: messageTextEntry.text, recipient: phoneNumberEntry.text!)
         }
-        else if state == 2 {
+        else {
             addContact()
             
         }
@@ -141,12 +223,14 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
         }
 // Send player secret
         else if (state == 1) {
-            let burp = contacts
-            print(burp)
             phoneNumberEntry.isHidden = false
             phoneNumberEntry.isEnabled = false
             
-            messageTextEntry.isHidden = true
+            messageTextEntry.layer.borderWidth = 1
+            messageTextEntry.layer.cornerRadius = 3
+            messageTextEntry.layer.borderColor = UIColor.lightGray.cgColor
+            messageTextEntry.isHidden = false
+            
             reminderText.isHidden = true
             singleContactPicker.isHidden = false
             welcomeLabel.text = "Which contact will you reach out to?"
@@ -173,7 +257,7 @@ class SocialViewController: UIViewController, MFMessageComposeViewControllerDele
 
 // MARK: - Action definitions]
     func updateUneditablePhoneNumberField(contactName: String) {
-        let phone = contacts.filter("name contains '" + contactName + "'").first?.phonenumber
+        let phone = self.contacts.filter("name contains '" + contactName + "'").first?.phonenumber
         self.phoneNumberEntry.text = phone
     }
     func addContact() {
