@@ -7,3 +7,9 @@ This project runs on a Realm database and utilizes custom cells, state-dependent
 ### ======================
 ## Known Issues
 * I'm currently aware of a problem when starting with a fresh Realm database wherein no data will actually be saved to the server. To rectify this, simply add one LogList and one ContactList via the Realm Browser, then reload the app. 
+## Special Thanks
+* Thank you to [Andrew Bancroft](https://www.andrewcbancroft.com/2016/06/02/creating-calendar-events-with-event-kit-and-swift/) for his wonderful tutorials on EKEventStore. 
+
+* Another huge thanks to the Apple and Realm teams for keeping such clean, easy-to-read documentation. 
+
+* [Soggy Bag](https://gist.github.com/soggybag/1c863ab275e1c0e09936/revisions) is another GitHub user that hosts a great gist of sending an SMS through a UIMessage view. 
