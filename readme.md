@@ -12,4 +12,4 @@ This project runs on a Realm database and utilizes custom cells, state-dependent
 
 * Another huge thanks to the Apple and Realm teams for keeping such clean, easy-to-read documentation. 
 
-* [Soggy Bag](https://gist.github.com/soggybag/1c863ab275e1c0e09936/revisions) is another GitHub user that hosts a great gist of sending an SMS through a UIMessage view. 
+* [Soggy Bag](https://gist.github.com/soggybag/1c863ab275e1c0e09936/revisions) is another GitHub user that hosts a great gist of sending an SMS through MessageUI.
